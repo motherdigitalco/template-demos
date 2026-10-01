@@ -1,0 +1,461 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Copper Cup — Specialty Coffee Roasters</title>
+  <meta name="description" content="Copper Cup — small-batch roasted coffee, slow brew bar, and fresh pastries. Visit us downtown or order beans to brew at home.">
+
+  <!-- ============================================================
+       ★ COPPER CUP TEMPLATE — QUICK CUSTOMIZATION ★
+       ------------------------------------------------------------
+       1. CAFÉ NAME ......: search for "Copper Cup" and replace
+       2. PHONE ..........: search for "+1 (555) 381-2740"
+       3. EMAIL ..........: search for "hello@coppercup.cafe"
+       4. ADDRESS ........: search for "214 Roast House Lane"
+       5. HOURS ..........: edit the "Visit Us" section below
+       6. MENU & PRICES ..: edit the "Menu" section below
+       7. COLORS & FONTS .: edit the :root variables in styles.css
+       8. CONTACT FORM ...: point the form to Formspree/Basin —
+                           see the comment above the <form> tag
+       ============================================================ -->
+
+  <link rel="preconnect" href="https://fonts.googleapis.com">
+  <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+  <link href="https://fonts.googleapis.com/css2?family=Fraunces:ital,opsz,wght@0,9..144,400;0,9..144,500;0,9..144,600;0,9..144,700;1,9..144,400;1,9..144,500&family=Inter:wght@300;400;500;600&display=swap" rel="stylesheet">
+  <link rel="stylesheet" href="styles.css">
+</head>
+<body>
+
+  <!-- ======================= HEADER ======================= -->
+  <header class="site-header" id="siteHeader">
+    <div class="container header-inner">
+      <a href="#top" class="logo" aria-label="Copper Cup home">
+        <svg class="logo-mark" viewBox="0 0 32 32" fill="none" aria-hidden="true">
+          <path d="M7 12h15v6a7 7 0 0 1-7 7H9a2 2 0 0 1-2-2v-11z" stroke="currentColor" stroke-width="2" stroke-linejoin="round"/>
+          <path d="M22 14h2.5a3.5 3.5 0 0 1 0 7H22" stroke="currentColor" stroke-width="2" stroke-linecap="round"/>
+          <path d="M11 7c-1.2 1.4 1.2 2.4 0 3.8M15.5 7c-1.2 1.4 1.2 2.4 0 3.8" stroke="currentColor" stroke-width="1.6" stroke-linecap="round"/>
+        </svg>
+        <span>Copper Cup</span>
+      </a>
+      <nav class="main-nav" aria-label="Primary">
+        <a href="#story">Our Story</a>
+        <a href="#menu">Menu</a>
+        <a href="#roast">Roaster</a>
+        <a href="#visit">Visit Us</a>
+      </nav>
+      <div class="header-actions">
+        <a class="btn btn-small btn-copper" href="#catering">Order Beans</a>
+        <button class="nav-toggle" id="navToggle" aria-label="Open menu" aria-expanded="false">
+          <span></span><span></span><span></span>
+        </button>
+      </div>
+    </div>
+    <nav class="mobile-nav" id="mobileNav" aria-label="Mobile">
+      <a href="#story">Our Story</a>
+      <a href="#menu">Menu</a>
+      <a href="#roast">Roaster</a>
+      <a href="#visit">Visit Us</a>
+      <a class="btn btn-copper" href="#catering">Order Beans</a>
+    </nav>
+  </header>
+
+  <main id="top">
+
+    <!-- ======================= HERO ======================= -->
+    <section class="hero">
+      <div class="container hero-grid">
+        <div class="hero-copy reveal">
+          <p class="eyebrow">Roastery &amp; Café — Est. 2018</p>
+          <h1>Small-batch coffee,<br><em>poured with care.</em></h1>
+          <p class="lede">We roast every bean in-house, brew every cup to order, and bake every pastry at dawn. Come taste the difference fresh makes.</p>
+          <div class="hero-ctas">
+            <a class="btn btn-copper" href="#menu">See the Menu</a>
+            <a class="btn btn-outline" href="#visit">Find the Café</a>
+          </div>
+          <ul class="hero-stats">
+            <li><strong>8</strong><span>years roasting</span></li>
+            <li><strong>14</strong><span>single origins</span></li>
+            <li><strong>4.9 ★</strong><span>2,300+ reviews</span></li>
+          </ul>
+        </div>
+        <div class="hero-visual reveal" aria-hidden="true">
+          <div class="cup-stage">
+            <div class="cup-glow"></div>
+            <svg class="cup-svg" viewBox="0 0 320 340" fill="none">
+              <!-- steam -->
+              <g class="steam" stroke="#f3e7d3" stroke-width="5" stroke-linecap="round" opacity="0.55">
+                <path class="steam-1" d="M120 118 c -10 -18 10 -28 0 -46 c -8 -15 6 -26 0 -40"/>
+                <path class="steam-2" d="M160 112 c -10 -18 10 -28 0 -46 c -8 -15 6 -26 0 -40"/>
+                <path class="steam-3" d="M200 118 c -10 -18 10 -28 0 -46 c -8 -15 6 -26 0 -40"/>
+              </g>
+              <!-- saucer -->
+              <ellipse cx="160" cy="292" rx="112" ry="22" fill="#3a2417"/>
+              <ellipse cx="160" cy="286" rx="112" ry="22" fill="#4d2f1d"/>
+              <ellipse cx="160" cy="284" rx="84" ry="15" fill="#38241a"/>
+              <!-- cup body -->
+              <path d="M84 150 h152 l-14 118 a18 18 0 0 1 -18 16 h-88 a18 18 0 0 1 -18 -16 z" fill="#f3e7d3"/>
+              <path d="M84 150 h152 l-3 26 h-146 z" fill="#b87333"/>
+              <!-- cup sleeve label -->
+              <path d="M92 196 h136 l-6 52 h-124 z" fill="#241610"/>
+              <text x="160" y="222" text-anchor="middle" fill="#d9a05b" font-family="Fraunces, serif" font-size="14.5" letter-spacing="2">COPPER CUP</text>
+              <text x="160" y="240" text-anchor="middle" fill="#f3e7d3" font-family="Inter, sans-serif" font-size="9" letter-spacing="4">ROASTERY</text>
+              <!-- handle -->
+              <path d="M236 168 c 30 -2 44 14 40 34 c -4 22 -24 34 -48 32" stroke="#f3e7d3" stroke-width="16" stroke-linecap="round"/>
+              <!-- coffee surface -->
+              <ellipse cx="160" cy="150" rx="76" ry="14" fill="#2a1a12"/>
+              <ellipse cx="160" cy="150" rx="62" ry="10" fill="#4d2f1d"/>
+              <ellipse cx="160" cy="150" rx="40" ry="6" fill="#6b4426"/>
+              <ellipse cx="160" cy="150" rx="18" ry="3" fill="#8a5a30"/>
+            </svg>
+            <div class="cup-card">
+              <p class="cup-card-title">On the bar today</p>
+              <p class="cup-card-text">Ethiopia Guji pour over<br><span>jasmine · bergamot · honey</span></p>
+            </div>
+          </div>
+        </div>
+      </div>
+    </section>
+
+    <!-- ======================= MARQUEE ======================= -->
+    <div class="marquee" aria-hidden="true">
+      <div class="marquee-track">
+        <span>Roasted In-House</span><i>●</i><span>Single Origin</span><i>●</i><span>Baked at Dawn</span><i>●</i><span>Slow Brew Bar</span><i>●</i><span>Oat Milk, No Upcharge</span><i>●</i><span>Free Wi-Fi</span><i>●</i>
+        <span>Roasted In-House</span><i>●</i><span>Single Origin</span><i>●</i><span>Baked at Dawn</span><i>●</i><span>Slow Brew Bar</span><i>●</i><span>Oat Milk, No Upcharge</span><i>●</i><span>Free Wi-Fi</span><i>●</i>
+      </div>
+    </div>
+
+    <!-- ======================= STORY ======================= -->
+    <section class="section story" id="story">
+      <div class="container story-grid">
+        <div class="story-visual reveal" aria-hidden="true">
+          <!-- Pure-CSS coffee bag -->
+          <div class="bag">
+            <div class="bag-fold"></div>
+            <div class="bag-label">
+              <p class="bag-brand">Copper Cup</p>
+              <p class="bag-origin">Ethiopia · Guji Zone</p>
+              <div class="roast-meter" aria-hidden="true">
+                <span class="rm-label">Roast</span>
+                <span class="rm-dots"><i class="on"></i><i class="on"></i><i class="on"></i><i></i><i></i></span>
+                <span class="rm-value">Medium</span>
+              </div>
+              <p class="bag-notes">jasmine · bergamot · honey</p>
+              <p class="bag-weight">12 oz whole bean</p>
+            </div>
+          </div>
+          <div class="story-stamp">
+            <span class="stamp-num">100%</span>
+            <span class="stamp-text">roasted<br>in-house</span>
+          </div>
+        </div>
+        <div class="story-copy reveal">
+          <p class="eyebrow">Our Story</p>
+          <h2>From green bean<br>to <em>your cup.</em></h2>
+          <p>Copper Cup started in 2018 with a secondhand roaster and a stubborn belief: coffee tastes better when the distance from roast to cup is measured in days, not months. We buy from fourteen smallholder farms, roast in 12-kilo batches, and never let a bean sit longer than three weeks.</p>
+          <ul class="check-list">
+            <li>Roasted on-site every Tuesday &amp; Friday</li>
+            <li>Direct-trade lots from 14 origins</li>
+            <li>Pastries baked in-house each morning</li>
+          </ul>
+          <p class="signature">— June &amp; Marcus Hale, founders</p>
+        </div>
+      </div>
+    </section>
+
+    <!-- ======================= MENU ======================= -->
+    <section class="section menu" id="menu">
+      <div class="container">
+        <div class="section-head reveal">
+          <p class="eyebrow">Taste</p>
+          <h2>The <em>Menu</em></h2>
+          <p class="section-sub">Every espresso drink pulls a double shot of our house blend. Decaf and oat milk always free.</p>
+        </div>
+
+        <div class="tabs reveal" role="tablist" aria-label="Menu categories">
+          <button class="tab active" role="tab" aria-selected="true" data-tab="espresso">Espresso</button>
+          <button class="tab" role="tab" aria-selected="false" data-tab="brew">Brew Bar</button>
+          <button class="tab" role="tab" aria-selected="false" data-tab="pastries">Pastries</button>
+          <button class="tab" role="tab" aria-selected="false" data-tab="brunch">Weekend Brunch</button>
+        </div>
+
+        <div class="tab-panels reveal">
+          <div class="tab-panel active" id="panel-espresso" role="tabpanel">
+            <ul class="price-list">
+              <li><span class="pl-name">Espresso <small>double shot, house blend</small></span><span class="pl-dots"></span><span class="pl-price">$3.50</span></li>
+              <li><span class="pl-name">Cortado <small>equal parts espresso &amp; steamed milk</small></span><span class="pl-dots"></span><span class="pl-price">$4.25</span></li>
+              <li><span class="pl-name">Cappuccino <small>classic dry foam cap</small></span><span class="pl-dots"></span><span class="pl-price">$4.50</span></li>
+              <li><span class="pl-name">Flat White <small>velvety microfoam, double ristretto</small></span><span class="pl-dots"></span><span class="pl-price">$4.75</span></li>
+              <li><span class="pl-name">Caramelized Honey Latte <small>house honey syrup, sea salt</small></span><span class="pl-dots"></span><span class="pl-price">$5.50</span></li>
+              <li><span class="pl-name">Mocha <small>espresso, dark chocolate, steamed milk</small></span><span class="pl-dots"></span><span class="pl-price">$5.25</span></li>
+            </ul>
+          </div>
+          <div class="tab-panel" id="panel-brew" role="tabpanel">
+            <ul class="price-list">
+              <li><span class="pl-name">Pour Over <small>V60, single origin of the day</small></span><span class="pl-dots"></span><span class="pl-price">$5.00</span></li>
+              <li><span class="pl-name">Chemex for Two <small>brewed tableside, serves two</small></span><span class="pl-dots"></span><span class="pl-price">$9.00</span></li>
+              <li><span class="pl-name">Cold Brew <small>18-hour steep, served over ice</small></span><span class="pl-dots"></span><span class="pl-price">$4.75</span></li>
+              <li><span class="pl-name">Nitro Cold Brew <small>cascading, creamy, no ice needed</small></span><span class="pl-dots"></span><span class="pl-price">$5.50</span></li>
+              <li><span class="pl-name">French Press <small>full immersion, 12 oz</small></span><span class="pl-dots"></span><span class="pl-price">$6.00</span></li>
+              <li><span class="pl-name">Espresso Tonic <small>double shot over artisan tonic</small></span><span class="pl-dots"></span><span class="pl-price">$5.75</span></li>
+            </ul>
+          </div>
+          <div class="tab-panel" id="panel-pastries" role="tabpanel">
+            <ul class="price-list">
+              <li><span class="pl-name">Butter Croissant <small>laminated over three days</small></span><span class="pl-dots"></span><span class="pl-price">$3.75</span></li>
+              <li><span class="pl-name">Cardamom Morning Bun <small>orange glaze</small></span><span class="pl-dots"></span><span class="pl-price">$4.50</span></li>
+              <li><span class="pl-name">Espresso Brownie <small>made with today's roast</small></span><span class="pl-dots"></span><span class="pl-price">$4.25</span></li>
+              <li><span class="pl-name">Banana Espresso Bread <small>toasted, salted butter</small></span><span class="pl-dots"></span><span class="pl-price">$3.50</span></li>
+              <li><span class="pl-name">Ham &amp; Gruyère Croissant <small>warm from the oven</small></span><span class="pl-dots"></span><span class="pl-price">$6.25</span></li>
+              <li><span class="pl-name">Seasonal Galette <small>ask what's baking today</small></span><span class="pl-dots"></span><span class="pl-price">$5.00</span></li>
+            </ul>
+          </div>
+          <div class="tab-panel" id="panel-brunch" role="tabpanel">
+            <ul class="price-list">
+              <li><span class="pl-name">Shakshuka <small>baked eggs, harissa tomato, sourdough</small></span><span class="pl-dots"></span><span class="pl-price">$12.50</span></li>
+              <li><span class="pl-name">Ricotta Hotcakes <small>whipped ricotta, hot honey</small></span><span class="pl-dots"></span><span class="pl-price">$11.00</span></li>
+              <li><span class="pl-name">Chilaquiles <small>salsa roja, fried eggs, crema</small></span><span class="pl-dots"></span><span class="pl-price">$12.00</span></li>
+              <li><span class="pl-name">Avocado Toast <small>sourdough, chili crunch, lime</small></span><span class="pl-dots"></span><span class="pl-price">$10.50</span></li>
+              <li><span class="pl-name">Breakfast Burrito <small>egg, potato, cheddar, salsa</small></span><span class="pl-dots"></span><span class="pl-price">$9.75</span></li>
+              <li><span class="pl-name">Granola Bowl <small>house granola, yogurt, fruit</small></span><span class="pl-dots"></span><span class="pl-price">$8.50</span></li>
+            </ul>
+            <p class="panel-note">Brunch served Saturday &amp; Sunday, 8a – 2p.</p>
+          </div>
+        </div>
+
+        <p class="menu-note reveal">Beans to brew at home? <a href="#catering">Order a 12 oz bag</a> — roasted the same week it ships.</p>
+      </div>
+    </section>
+
+    <!-- ======================= GALLERY ======================= -->
+    <section class="section gallery" id="gallery">
+      <div class="container">
+        <div class="section-head reveal">
+          <p class="eyebrow">Moments</p>
+          <h2>From the <em>Bar</em></h2>
+          <p class="section-sub">Slow mornings, fast pours. Follow <a href="#" class="inline-link">@coppercup.cafe</a> for the daily grind.</p>
+        </div>
+        <div class="gallery-grid reveal">
+          <figure class="g-tile g-1"><figcaption>Pour Over</figcaption></figure>
+          <figure class="g-tile g-2"><figcaption>Latte Art</figcaption></figure>
+          <figure class="g-tile g-3"><figcaption>Fresh Croissants</figcaption></figure>
+          <figure class="g-tile g-4"><figcaption>Roast Day</figcaption></figure>
+          <figure class="g-tile g-5"><figcaption>Cold Brew</figcaption></figure>
+          <figure class="g-tile g-6"><figcaption>Morning Rush</figcaption></figure>
+        </div>
+        <!-- TIP: replace the gradient tiles above with your own photos:
+             <figure class="g-tile"><img src="images/bar-1.jpg" alt="..."><figcaption>...</figcaption></figure> -->
+      </div>
+    </section>
+
+    <!-- ======================= TESTIMONIALS ======================= -->
+    <section class="section reviews" id="reviews">
+      <div class="container">
+        <div class="section-head reveal">
+          <p class="eyebrow">Kind Words</p>
+          <h2>Regulars <em>Talk</em></h2>
+        </div>
+        <div class="slider reveal" id="reviewSlider">
+          <div class="slides">
+            <blockquote class="slide active">
+              <div class="stars" aria-label="5 out of 5 stars">★★★★★</div>
+              <p>"The cortado here ruined every other coffee shop for me. You can taste that the beans were roasted days ago, not months."</p>
+              <footer>— Dana W. <span>Daily regular</span></footer>
+            </blockquote>
+            <blockquote class="slide">
+              <div class="stars" aria-label="5 out of 5 stars">★★★★★</div>
+              <p>"I wrote half my thesis at the corner table. Fast wifi, outlets everywhere, and the cardamom morning bun is a religious experience."</p>
+              <footer>— Priya N. <span>Corner-table scholar</span></footer>
+            </blockquote>
+            <blockquote class="slide">
+              <div class="stars" aria-label="5 out of 5 stars">★★★★★</div>
+              <p>"Ordered beans for home and they arrived still smelling like the roastery. My V60 has never been happier."</p>
+              <footer>— Marcus T. <span>Bean subscriber</span></footer>
+            </blockquote>
+          </div>
+          <div class="slider-dots" role="tablist" aria-label="Choose review">
+            <button class="dot active" data-slide="0" aria-label="Review 1"></button>
+            <button class="dot" data-slide="1" aria-label="Review 2"></button>
+            <button class="dot" data-slide="2" aria-label="Review 3"></button>
+          </div>
+        </div>
+      </div>
+    </section>
+
+    <!-- ======================= ROASTER SPOTLIGHT ======================= -->
+    <section class="section roast" id="roast">
+      <div class="container">
+        <div class="section-head reveal">
+          <p class="eyebrow">Roaster's Spotlight</p>
+          <h2>This Month's <em>Beans</em></h2>
+          <p class="section-sub">Three lots we're excited about. All available as 12 oz bags in the café or to order below.</p>
+        </div>
+        <div class="roast-grid reveal">
+          <article class="roast-card">
+            <div class="bean b-1" aria-hidden="true"></div>
+            <h3>Ethiopia · Guji</h3>
+            <p class="origin">Washed process · 2,100 masl</p>
+            <p class="notes">jasmine · bergamot · honey</p>
+            <div class="roast-meter">
+              <span class="rm-label">Roast</span>
+              <span class="rm-dots"><i class="on"></i><i class="on"></i><i class="on"></i><i></i><i></i></span>
+              <span class="rm-value">Medium</span>
+            </div>
+            <p class="bag-price">$18 <span>/ 12 oz bag</span></p>
+          </article>
+          <article class="roast-card">
+            <div class="bean b-2" aria-hidden="true"></div>
+            <h3>Colombia · Huila</h3>
+            <p class="origin">Honey process · 1,750 masl</p>
+            <p class="notes">red apple · panela · cocoa</p>
+            <div class="roast-meter">
+              <span class="rm-label">Roast</span>
+              <span class="rm-dots"><i class="on"></i><i class="on"></i><i class="on"></i><i class="on"></i><i></i></span>
+              <span class="rm-value">Med-dark</span>
+            </div>
+            <p class="bag-price">$17 <span>/ 12 oz bag</span></p>
+          </article>
+          <article class="roast-card">
+            <div class="bean b-3" aria-hidden="true"></div>
+            <h3>Brazil · Cerrado</h3>
+            <p class="origin">Natural process · 1,100 masl</p>
+            <p class="notes">dark chocolate · hazelnut · molasses</p>
+            <div class="roast-meter">
+              <span class="rm-label">Roast</span>
+              <span class="rm-dots"><i class="on"></i><i class="on"></i><i></i><i></i><i></i></span>
+              <span class="rm-value">Light-med</span>
+            </div>
+            <p class="bag-price">$16 <span>/ 12 oz bag</span></p>
+          </article>
+        </div>
+      </div>
+    </section>
+
+    <!-- ======================= VISIT ======================= -->
+    <section class="section visit" id="visit">
+      <div class="container visit-grid">
+        <div class="visit-info reveal">
+          <p class="eyebrow">Find Us</p>
+          <h2>Visit the <em>Café</em></h2>
+          <ul class="contact-list">
+            <li>
+              <svg viewBox="0 0 24 24" fill="none" aria-hidden="true"><path d="M12 21s-7-5.5-7-11a7 7 0 1 1 14 0c0 5.5-7 11-7 11z" stroke="currentColor" stroke-width="1.6"/><circle cx="12" cy="10" r="2.5" stroke="currentColor" stroke-width="1.6"/></svg>
+              <span>214 Roast House Lane, Suite 9<br>Your City, ST 12345</span>
+            </li>
+            <li>
+              <svg viewBox="0 0 24 24" fill="none" aria-hidden="true"><path d="M5 4h4l2 5-2.5 1.5a11 11 0 0 0 5 5L15 13l5 2v4a2 2 0 0 1-2 2A16 16 0 0 1 3 6a2 2 0 0 1 2-2z" stroke="currentColor" stroke-width="1.6" stroke-linejoin="round"/></svg>
+              <a href="tel:+15553812740">+1 (555) 381-2740</a>
+            </li>
+            <li>
+              <svg viewBox="0 0 24 24" fill="none" aria-hidden="true"><rect x="3" y="5" width="18" height="14" rx="2" stroke="currentColor" stroke-width="1.6"/><path d="m3 7 9 6 9-6" stroke="currentColor" stroke-width="1.6"/></svg>
+              <a href="mailto:hello@coppercup.cafe">hello@coppercup.cafe</a>
+            </li>
+          </ul>
+          <table class="hours">
+            <tbody>
+              <tr><th>Monday – Friday</th><td>6:30a – 6:00p</td></tr>
+              <tr><th>Saturday</th><td>7:00a – 6:00p</td></tr>
+              <tr><th>Sunday</th><td>7:00a – 4:00p</td></tr>
+            </tbody>
+          </table>
+        </div>
+        <div class="visit-map reveal" aria-hidden="true">
+          <!-- TO EMBED A REAL MAP: replace this div with your Google Maps embed:
+               <iframe src="https://www.google.com/maps/embed?..." ...></iframe> -->
+          <div class="map-faux">
+            <div class="map-pin">
+              <svg viewBox="0 0 24 24" fill="none"><path d="M12 21s-7-5.5-7-11a7 7 0 1 1 14 0c0 5.5-7 11-7 11z" fill="#241610"/><circle cx="12" cy="10" r="2.5" fill="#faf3e7"/></svg>
+            </div>
+            <p>Map preview —<br>embed your Google Map here</p>
+          </div>
+        </div>
+      </div>
+    </section>
+
+    <!-- ======================= CATERING / CONTACT ======================= -->
+    <section class="section catering" id="catering">
+      <div class="container catering-card reveal">
+        <div class="catering-copy">
+          <p class="eyebrow">Catering &amp; Beans</p>
+          <h2>Let's Talk <em>Coffee</em></h2>
+          <p>Weddings, office coffee bars, morning meetings — we cater it all. Or just tell us which beans to ship to your door.</p>
+          <ul class="check-list">
+            <li>Full espresso bar catering for events</li>
+            <li>Bean subscriptions, roasted to order</li>
+            <li>Wholesale for cafés &amp; offices</li>
+          </ul>
+          <p class="catering-phone">Prefer to talk? Call <a href="tel:+15553812740">+1 (555) 381-2740</a>.</p>
+        </div>
+        <!-- TO MAKE THIS FORM SEND EMAIL: create a free form endpoint at
+             https://formspree.io or https://usebasin.com, then change the
+             <form> tag to: <form action="https://formspree.io/f/YOUR_ID" method="POST"> -->
+        <form class="catering-form" id="cateringForm" novalidate>
+          <div class="field-row">
+            <div class="field">
+              <label for="fName">Full name</label>
+              <input id="fName" name="name" type="text" placeholder="Alex Rivera" required>
+            </div>
+            <div class="field">
+              <label for="fEmail">Email</label>
+              <input id="fEmail" name="email" type="email" placeholder="alex@example.com" required>
+            </div>
+          </div>
+          <div class="field">
+            <label for="fTopic">I'm interested in</label>
+            <select id="fTopic" name="topic" required>
+              <option value="" disabled selected>Choose a topic…</option>
+              <option>Event catering</option>
+              <option>Bean subscription</option>
+              <option>Wholesale</option>
+              <option>Just saying hi</option>
+            </select>
+          </div>
+          <div class="field">
+            <label for="fDetails">Details <span class="opt">(optional)</span></label>
+            <textarea id="fDetails" name="details" rows="3" placeholder="Event date, guest count, favorite roast…"></textarea>
+          </div>
+          <button class="btn btn-espresso" type="submit">Send Message</button>
+          <p class="form-msg" id="formMsg" role="status"></p>
+        </form>
+      </div>
+    </section>
+
+  </main>
+
+  <!-- ======================= FOOTER ======================= -->
+  <footer class="site-footer">
+    <div class="container footer-grid">
+      <div class="footer-brand">
+        <a href="#top" class="logo"><span>Copper Cup</span></a>
+        <p>Specialty roastery &amp; café. Beans roasted Tuesdays and Fridays — never older than three weeks.</p>
+        <div class="socials">
+          <a href="#" aria-label="Instagram"><svg viewBox="0 0 24 24" fill="none"><rect x="3" y="3" width="18" height="18" rx="5" stroke="currentColor" stroke-width="1.6"/><circle cx="12" cy="12" r="4" stroke="currentColor" stroke-width="1.6"/><circle cx="17.2" cy="6.8" r="1.2" fill="currentColor"/></svg></a>
+          <a href="#" aria-label="Facebook"><svg viewBox="0 0 24 24" fill="none"><path d="M14 8h2V5h-2a3 3 0 0 0-3 3v2H9v3h2v6h3v-6h2l1-3h-3V8.5c0-.3.2-.5.5-.5z" stroke="currentColor" stroke-width="1.6" stroke-linejoin="round"/></svg></a>
+          <a href="#" aria-label="TikTok"><svg viewBox="0 0 24 24" fill="none"><path d="M14 4v10.5a3.75 3.75 0 1 1-3.75-3.75" stroke="currentColor" stroke-width="1.6" stroke-linecap="round"/><path d="M14 4c.4 2.6 2 4.3 4.8 4.5" stroke="currentColor" stroke-width="1.6" stroke-linecap="round"/></svg></a>
+        </div>
+      </div>
+      <nav class="footer-nav" aria-label="Footer">
+        <h4>Explore</h4>
+        <a href="#story">Our Story</a>
+        <a href="#menu">Menu</a>
+        <a href="#roast">Roaster</a>
+        <a href="#catering">Catering</a>
+      </nav>
+      <div class="footer-hours">
+        <h4>Hours</h4>
+        <p>Mon – Fri · 6:30a – 6p<br>Sat · 7a – 6p<br>Sun · 7a – 4p</p>
+      </div>
+      <div class="footer-contact">
+        <h4>Contact</h4>
+        <p>214 Roast House Lane, Suite 9<br><a href="tel:+15553812740">+1 (555) 381-2740</a><br><a href="mailto:hello@coppercup.cafe">hello@coppercup.cafe</a></p>
+      </div>
+    </div>
+    <div class="container footer-base">
+      <p>© <span id="year">2026</span> Copper Cup Roastery. All rights reserved.</p>
+      <a href="#top" class="to-top">Back to top ↑</a>
+    </div>
+  </footer>
+
+  <script src="script.js"></script>
+</body>
+</html>
