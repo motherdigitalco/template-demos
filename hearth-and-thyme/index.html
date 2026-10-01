@@ -1,0 +1,600 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Hearth &amp; Thyme — A Cozy Cooking Journal</title>
+  <meta name="description" content="Hearth & Thyme — cozy, from-scratch recipes for slow kitchens. Weeknight dinners, baking, preserving, and slow Sunday cooking.">
+
+  <!-- ============================================================
+       ★ HEARTH & THYME TEMPLATE — QUICK CUSTOMIZATION ★
+       ------------------------------------------------------------
+       1. BLOG NAME ....: search for "Hearth & Thyme" and replace
+       2. COOK'S NAME ..: search for "June" (the "About the Cook"
+                          section) and replace
+       3. EMAIL ........: search for "hello@hearthandthyme.com"
+       4. SOCIALS ......: edit the footer "Follow Along" links
+       5. RECIPES ......: edit the RECIPES object at the top of
+                          script.js — titles, times, ingredients,
+                          steps, and categories all live there
+       6. SHOP .........: edit the "Shop" section below — product
+                          names, prices, and buy-button links
+                          (point each Buy button at your Gumroad,
+                          Etsy, or Stripe checkout URL)
+       7. COLORS & FONTS: edit the :root variables in styles.css
+       8. NEWSLETTER ...: point the form to Formspree — see the
+                          comment above the <form> tag
+       ============================================================ -->
+
+  <link rel="preconnect" href="https://fonts.googleapis.com">
+  <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+  <link href="https://fonts.googleapis.com/css2?family=Cormorant+Garamond:ital,wght@0,400;0,500;0,600;0,700;1,400;1,500;1,600&family=Nunito:wght@300;400;500;600;700;800&family=Caveat:wght@500;600&display=swap" rel="stylesheet">
+  <link rel="stylesheet" href="styles.css">
+</head>
+<body>
+
+  <!-- ======================= HEADER ======================= -->
+  <header class="site-header" id="siteHeader">
+    <div class="container header-inner">
+      <a href="#top" class="logo" aria-label="Hearth and Thyme home">
+        <svg class="logo-mark" viewBox="0 0 32 32" fill="none" aria-hidden="true">
+          <path d="M16 28 C 15 20, 15 12, 17 5" stroke="currentColor" stroke-width="2" stroke-linecap="round"/>
+          <path d="M16 22 C 12 21, 9 18, 8 14 C 12 15, 15 18, 16 22 Z" fill="currentColor" opacity="0.75"/>
+          <path d="M16 22 C 20 21, 23 18, 24 14 C 20 15, 17 18, 16 22 Z" fill="currentColor" opacity="0.75"/>
+          <path d="M16 15 C 13 14, 11 12, 10 9 C 13 10, 15 12, 16 15 Z" fill="currentColor" opacity="0.55"/>
+          <path d="M16 15 C 19 14, 21 12, 22 9 C 19 10, 17 12, 16 15 Z" fill="currentColor" opacity="0.55"/>
+        </svg>
+        <span>Hearth &amp; Thyme</span>
+      </a>
+      <nav class="main-nav" aria-label="Primary">
+        <a href="#recipes">Recipes</a>
+        <a href="#shop">Shop</a>
+        <a href="#about">About</a>
+        <a href="#reviews">Reviews</a>
+      </nav>
+      <div class="header-actions">
+        <a class="btn btn-small btn-terra" href="#newsletter">Get Recipes</a>
+        <button class="nav-toggle" id="navToggle" aria-label="Open menu" aria-expanded="false">
+          <span></span><span></span><span></span>
+        </button>
+      </div>
+    </div>
+    <nav class="mobile-nav" id="mobileNav" aria-label="Mobile">
+      <a href="#recipes">Recipes</a>
+      <a href="#shop">Shop</a>
+      <a href="#about">About</a>
+      <a href="#reviews">Reviews</a>
+      <a class="btn btn-terra" href="#newsletter">Get Recipes</a>
+    </nav>
+  </header>
+
+  <main id="top">
+
+    <!-- ======================= HERO ======================= -->
+    <section class="hero">
+      <div class="container hero-grid">
+        <div class="hero-copy reveal">
+          <p class="eyebrow">A cozy cooking journal — Est. 2021</p>
+          <h1>Good food,<br><em>made slowly.</em></h1>
+          <p class="lede">From-scratch recipes for real kitchens — weeknight dinners that actually fit the week, weekend baking worth slowing down for, and preserving the harvest while it lasts.</p>
+          <div class="hero-ctas">
+            <a class="btn btn-terra" href="#recipes">Browse Recipes</a>
+            <a class="btn btn-ghost" href="#shop">Visit the Shop</a>
+          </div>
+          <!-- Recipe search: filters the recipe cards below as you type -->
+          <div class="search-wrap">
+            <form class="search-bar" id="searchForm" role="search">
+              <input type="search" id="searchInput" placeholder="Search recipes… try “apple” or “soup”" aria-label="Search recipes">
+              <button class="btn btn-sage btn-small" type="submit">Search</button>
+            </form>
+            <p class="search-hint">6 kitchen-tested recipes, free forever.</p>
+          </div>
+        </div>
+        <div class="reveal" aria-hidden="false">
+          <article class="feature-card">
+            <div class="feature-art">
+              <svg viewBox="0 0 120 120" fill="none" role="img" aria-label="Cast-iron skillet apple pie illustration">
+                <path d="M52 22 q4 -6 0 -12 M64 24 q4 -6 0 -12" stroke="#8a7360" stroke-width="3" stroke-linecap="round"/>
+                <rect x="96" y="56" width="26" height="12" rx="6" fill="#3a2e24"/>
+                <circle cx="60" cy="66" r="42" fill="#3a2e24"/>
+                <circle cx="60" cy="66" r="42" stroke="#2b2119" stroke-width="3"/>
+                <circle cx="60" cy="66" r="33" fill="#e8b96f"/>
+                <circle cx="60" cy="66" r="33" stroke="#c98f3f" stroke-width="3"/>
+                <path d="M33 52 L87 80 M33 80 L87 52 M33 66 L87 66 M47 38 L73 94 M73 38 L47 94" stroke="#c98f3f" stroke-width="3.5"/>
+                <circle cx="60" cy="66" r="33" fill="none" stroke="#a06a28" stroke-width="2" stroke-dasharray="4 5" opacity="0.6"/>
+              </svg>
+            </div>
+            <div class="feature-body">
+              <span class="ribbon">Recipe of the week</span>
+              <h3>Cast-Iron Skillet Apple Pie</h3>
+              <div class="feature-meta">
+                <span><svg viewBox="0 0 24 24" fill="none"><circle cx="12" cy="12" r="9" stroke="currentColor" stroke-width="2"/><path d="M12 7v5l3.5 2" stroke="currentColor" stroke-width="2" stroke-linecap="round"/></svg>1 hr 15 min</span>
+                <span><svg viewBox="0 0 24 24" fill="none"><path d="M4 20h4v-6H4v6zm6 0h4V10h-4v10zm6 0h4V4h-4v16z" fill="currentColor"/></svg>Medium</span>
+              </div>
+              <button class="btn btn-terra btn-small" data-open-recipe="apple-pie">Get the Recipe</button>
+            </div>
+          </article>
+        </div>
+      </div>
+    </section>
+
+    <div class="gingham-band" aria-hidden="true"></div>
+
+    <!-- ======================= RECIPES ======================= -->
+    <section class="section" id="recipes">
+      <div class="container">
+        <div class="section-head reveal">
+          <p class="eyebrow">From the Kitchen</p>
+          <h2>The <em>Recipe</em> Box</h2>
+          <p class="section-sub">Every recipe is tested in my own kitchen, written the way I'd explain it to a friend. Click any card for the full recipe — ingredients, steps, and a print button.</p>
+        </div>
+
+        <div class="pills reveal" role="group" aria-label="Filter recipes by category">
+          <button class="pill active" data-filter="all">All Recipes</button>
+          <button class="pill" data-filter="weeknight">Weeknight Dinners</button>
+          <button class="pill" data-filter="baking">Baking</button>
+          <button class="pill" data-filter="preserving">Preserving</button>
+          <button class="pill" data-filter="slow-sundays">Slow Sundays</button>
+        </div>
+
+        <div class="recipe-grid reveal" id="recipeGrid">
+
+          <article class="recipe-card" data-recipe="apple-pie" data-cats="baking" tabindex="0" role="button" aria-label="Open Cast-Iron Skillet Apple Pie recipe">
+            <div class="card-art art-1">
+              <svg viewBox="0 0 120 120" fill="none" role="img" aria-label="Apple pie illustration">
+                <path d="M52 22 q4 -6 0 -12 M64 24 q4 -6 0 -12" stroke="#8a7360" stroke-width="3" stroke-linecap="round"/>
+                <rect x="96" y="56" width="26" height="12" rx="6" fill="#3a2e24"/>
+                <circle cx="60" cy="66" r="42" fill="#3a2e24"/>
+                <circle cx="60" cy="66" r="42" stroke="#2b2119" stroke-width="3"/>
+                <circle cx="60" cy="66" r="33" fill="#e8b96f"/>
+                <circle cx="60" cy="66" r="33" stroke="#c98f3f" stroke-width="3"/>
+                <path d="M33 52 L87 80 M33 80 L87 52 M33 66 L87 66 M47 38 L73 94 M73 38 L47 94" stroke="#c98f3f" stroke-width="3.5"/>
+              </svg>
+            </div>
+            <div class="card-scallop" aria-hidden="true"></div>
+            <div class="card-body">
+              <span class="card-tag">Baking</span>
+              <h3>Cast-Iron Skillet Apple Pie</h3>
+              <div class="card-meta">
+                <span><svg viewBox="0 0 24 24" fill="none"><circle cx="12" cy="12" r="9" stroke="currentColor" stroke-width="2"/><path d="M12 7v5l3.5 2" stroke="currentColor" stroke-width="2" stroke-linecap="round"/></svg>1 hr 15 min</span>
+                <span><svg viewBox="0 0 24 24" fill="none"><path d="M4 20h4v-6H4v6zm6 0h4V10h-4v10zm6 0h4V4h-4v16z" fill="currentColor"/></svg>Medium</span>
+              </div>
+              <span class="card-link">View recipe →</span>
+            </div>
+          </article>
+
+          <article class="recipe-card" data-recipe="pot-roast" data-cats="slow-sundays" tabindex="0" role="button" aria-label="Open Slow Sunday Pot Roast recipe">
+            <div class="card-art art-2">
+              <svg viewBox="0 0 120 120" fill="none" role="img" aria-label="Dutch oven pot illustration">
+                <path d="M50 20 q5 -7 0 -14 M66 22 q5 -7 0 -14" stroke="#8a7360" stroke-width="3" stroke-linecap="round"/>
+                <rect x="22" y="60" width="10" height="16" rx="5" fill="#9c5636"/>
+                <rect x="88" y="60" width="10" height="16" rx="5" fill="#9c5636"/>
+                <rect x="28" y="52" width="64" height="46" rx="10" fill="#c06b45"/>
+                <rect x="28" y="52" width="64" height="46" rx="10" stroke="#9c5636" stroke-width="3"/>
+                <rect x="22" y="42" width="76" height="16" rx="8" fill="#a05a3a"/>
+                <circle cx="60" cy="38" r="7" fill="#7c4527"/>
+                <path d="M44 66 q6 -4 12 0 M64 74 q6 -4 12 0 M40 80 q6 -4 12 0" stroke="#8a4a2e" stroke-width="2.5" stroke-linecap="round"/>
+                <path d="M60 30 c -2 -4, 2 -6, 0 -10" stroke="#5f7052" stroke-width="2.5" stroke-linecap="round"/>
+                <ellipse cx="52" cy="24" rx="4" ry="2.4" fill="#5f7052" transform="rotate(-30 52 24)"/>
+                <ellipse cx="68" cy="24" rx="4" ry="2.4" fill="#5f7052" transform="rotate(30 68 24)"/>
+              </svg>
+            </div>
+            <div class="card-scallop" aria-hidden="true"></div>
+            <div class="card-body">
+              <span class="card-tag">Slow Sundays</span>
+              <h3>Slow Sunday Pot Roast</h3>
+              <div class="card-meta">
+                <span><svg viewBox="0 0 24 24" fill="none"><circle cx="12" cy="12" r="9" stroke="currentColor" stroke-width="2"/><path d="M12 7v5l3.5 2" stroke="currentColor" stroke-width="2" stroke-linecap="round"/></svg>4 hrs</span>
+                <span><svg viewBox="0 0 24 24" fill="none"><path d="M4 20h4v-6H4v6zm6 0h4V10h-4v10zm6 0h4V4h-4v16z" fill="currentColor"/></svg>Easy</span>
+              </div>
+              <span class="card-link">View recipe →</span>
+            </div>
+          </article>
+
+          <article class="recipe-card" data-recipe="shortbread" data-cats="baking" tabindex="0" role="button" aria-label="Open Honey Lavender Shortbread recipe">
+            <div class="card-art art-3">
+              <svg viewBox="0 0 120 120" fill="none" role="img" aria-label="Shortbread cookies illustration">
+                <path d="M86 34 C 84 48, 88 60, 84 74" stroke="#5f7052" stroke-width="3" stroke-linecap="round"/>
+                <circle cx="86" cy="28" r="4" fill="#b48a9e"/><circle cx="80" cy="36" r="4" fill="#b48a9e"/><circle cx="92" cy="38" r="4" fill="#b48a9e"/>
+                <ellipse cx="78" cy="52" rx="7" ry="3.4" fill="#8a9a7b" transform="rotate(-30 78 52)"/>
+                <ellipse cx="94" cy="56" rx="7" ry="3.4" fill="#8a9a7b" transform="rotate(30 94 56)"/>
+                <rect x="26" y="72" width="58" height="18" rx="6" fill="#d9a75f"/>
+                <rect x="30" y="56" width="58" height="18" rx="6" fill="#e8c07a"/>
+                <rect x="26" y="40" width="58" height="18" rx="6" fill="#f0d090"/>
+                <rect x="26" y="40" width="58" height="18" rx="6" stroke="#c98f3f" stroke-width="2.5"/>
+                <circle cx="42" cy="49" r="2" fill="#a06a28"/><circle cx="55" cy="49" r="2" fill="#a06a28"/><circle cx="68" cy="49" r="2" fill="#a06a28"/>
+              </svg>
+            </div>
+            <div class="card-scallop" aria-hidden="true"></div>
+            <div class="card-body">
+              <span class="card-tag">Baking</span>
+              <h3>Honey Lavender Shortbread</h3>
+              <div class="card-meta">
+                <span><svg viewBox="0 0 24 24" fill="none"><circle cx="12" cy="12" r="9" stroke="currentColor" stroke-width="2"/><path d="M12 7v5l3.5 2" stroke="currentColor" stroke-width="2" stroke-linecap="round"/></svg>45 min</span>
+                <span><svg viewBox="0 0 24 24" fill="none"><path d="M4 20h4v-6H4v6zm6 0h4V10h-4v10zm6 0h4V4h-4v16z" fill="currentColor"/></svg>Easy</span>
+              </div>
+              <span class="card-link">View recipe →</span>
+            </div>
+          </article>
+
+          <article class="recipe-card" data-recipe="tomato-soup" data-cats="weeknight preserving" tabindex="0" role="button" aria-label="Open Creamy Tomato Basil Soup recipe">
+            <div class="card-art art-4">
+              <svg viewBox="0 0 120 120" fill="none" role="img" aria-label="Tomato soup bowl illustration">
+                <path d="M48 18 q5 -7 0 -13 M62 20 q5 -7 0 -13 M74 18 q5 -7 0 -13" stroke="#8a7360" stroke-width="3" stroke-linecap="round"/>
+                <path d="M18 58 h84 a0 0 0 0 1 0 0 c0 22 -19 36 -42 36 c-23 0 -42 -14 -42 -36 z" fill="#c06b45"/>
+                <path d="M18 58 h84 a0 0 0 0 1 0 0 c0 22 -19 36 -42 36 c-23 0 -42 -14 -42 -36 z" stroke="#9c5636" stroke-width="3"/>
+                <ellipse cx="60" cy="58" rx="42" ry="10" fill="#d4694e"/>
+                <path d="M38 58 q10 -6 22 0 q12 6 22 0" stroke="#f6e4df" stroke-width="3.5" stroke-linecap="round"/>
+                <ellipse cx="74" cy="52" rx="9" ry="4.6" fill="#5f7052" transform="rotate(-24 74 52)"/>
+                <ellipse cx="48" cy="63" rx="7" ry="3.6" fill="#8a9a7b" transform="rotate(18 48 63)"/>
+                <rect x="52" y="94" width="16" height="8" rx="4" fill="#9c5636"/>
+              </svg>
+            </div>
+            <div class="card-scallop" aria-hidden="true"></div>
+            <div class="card-body">
+              <span class="card-tag">Weeknight Dinners</span>
+              <h3>Creamy Tomato Basil Soup</h3>
+              <div class="card-meta">
+                <span><svg viewBox="0 0 24 24" fill="none"><circle cx="12" cy="12" r="9" stroke="currentColor" stroke-width="2"/><path d="M12 7v5l3.5 2" stroke="currentColor" stroke-width="2" stroke-linecap="round"/></svg>35 min</span>
+                <span><svg viewBox="0 0 24 24" fill="none"><path d="M4 20h4v-6H4v6zm6 0h4V10h-4v10zm6 0h4V4h-4v16z" fill="currentColor"/></svg>Easy</span>
+              </div>
+              <span class="card-link">View recipe →</span>
+            </div>
+          </article>
+
+          <article class="recipe-card" data-recipe="cinnamon-rolls" data-cats="baking slow-sundays" tabindex="0" role="button" aria-label="Open Overnight Cinnamon Rolls recipe">
+            <div class="card-art art-5">
+              <svg viewBox="0 0 120 120" fill="none" role="img" aria-label="Cinnamon rolls illustration">
+                <rect x="20" y="48" width="80" height="48" rx="12" fill="#8a9a7b"/>
+                <rect x="20" y="48" width="80" height="48" rx="12" stroke="#5f7052" stroke-width="3"/>
+                <g>
+                  <circle cx="44" cy="66" r="14" fill="#f0d090" stroke="#c98f3f" stroke-width="2.5"/>
+                  <path d="M44 66 m-8 0 a8 8 0 1 1 8 8 a5 5 0 1 0 -5 -5 a2.6 2.6 0 1 1 2.6 2.6" stroke="#8a5a24" stroke-width="2.4" fill="none" stroke-linecap="round"/>
+                  <circle cx="76" cy="66" r="14" fill="#f0d090" stroke="#c98f3f" stroke-width="2.5"/>
+                  <path d="M76 66 m-8 0 a8 8 0 1 1 8 8 a5 5 0 1 0 -5 -5 a2.6 2.6 0 1 1 2.6 2.6" stroke="#8a5a24" stroke-width="2.4" fill="none" stroke-linecap="round"/>
+                  <circle cx="44" cy="84" r="0.1" fill="none"/>
+                  <circle cx="60" cy="80" r="13" fill="#f0d090" stroke="#c98f3f" stroke-width="2.5"/>
+                  <path d="M60 80 m-7.5 0 a7.5 7.5 0 1 1 7.5 7.5 a4.6 4.6 0 1 0 -4.6 -4.6" stroke="#8a5a24" stroke-width="2.2" fill="none" stroke-linecap="round"/>
+                </g>
+                <path d="M34 44 q4 -8 12 -8 M78 44 q-4 -8 -12 -8" stroke="#f6e4df" stroke-width="4" stroke-linecap="round"/>
+              </svg>
+            </div>
+            <div class="card-scallop" aria-hidden="true"></div>
+            <div class="card-body">
+              <span class="card-tag">Baking</span>
+              <h3>Overnight Cinnamon Rolls</h3>
+              <div class="card-meta">
+                <span><svg viewBox="0 0 24 24" fill="none"><circle cx="12" cy="12" r="9" stroke="currentColor" stroke-width="2"/><path d="M12 7v5l3.5 2" stroke="currentColor" stroke-width="2" stroke-linecap="round"/></svg>Overnight</span>
+                <span><svg viewBox="0 0 24 24" fill="none"><path d="M4 20h4v-6H4v6zm6 0h4V10h-4v10zm6 0h4V4h-4v16z" fill="currentColor"/></svg>Medium</span>
+              </div>
+              <span class="card-link">View recipe →</span>
+            </div>
+          </article>
+
+          <article class="recipe-card" data-recipe="focaccia" data-cats="baking weeknight" tabindex="0" role="button" aria-label="Open Garden Herb Focaccia recipe">
+            <div class="card-art art-6">
+              <svg viewBox="0 0 120 120" fill="none" role="img" aria-label="Herb focaccia illustration">
+                <rect x="18" y="52" width="84" height="38" rx="16" fill="#e8b96f"/>
+                <rect x="18" y="52" width="84" height="38" rx="16" stroke="#c98f3f" stroke-width="3"/>
+                <g fill="#c98f3f" opacity="0.75">
+                  <circle cx="36" cy="66" r="3"/><circle cx="52" cy="62" r="3"/><circle cx="68" cy="66" r="3"/><circle cx="84" cy="62" r="3"/>
+                  <circle cx="44" cy="78" r="3"/><circle cx="60" cy="78" r="3"/><circle cx="76" cy="78" r="3"/>
+                </g>
+                <path d="M30 44 C 32 36, 30 30, 34 24" stroke="#5f7052" stroke-width="2.6" stroke-linecap="round"/>
+                <path d="M30 38 l-6 -3 M30 38 l6 -3 M31 32 l-5 -2 M31 32 l5 -2" stroke="#5f7052" stroke-width="2" stroke-linecap="round"/>
+                <path d="M90 44 C 88 36, 90 30, 86 24" stroke="#5f7052" stroke-width="2.6" stroke-linecap="round"/>
+                <path d="M90 38 l-6 -3 M90 38 l6 -3 M89 32 l-5 -2 M89 32 l5 -2" stroke="#5f7052" stroke-width="2" stroke-linecap="round"/>
+                <circle cx="60" cy="40" r="7" fill="#c06b45"/>
+                <path d="M60 33 l1.6 3.4 3.6 0.4 -2.7 2.4 0.7 3.6 -3.2 -1.8 -3.2 1.8 0.7 -3.6 -2.7 -2.4 3.6 -0.4 z" fill="#5f7052"/>
+              </svg>
+            </div>
+            <div class="card-scallop" aria-hidden="true"></div>
+            <div class="card-body">
+              <span class="card-tag">Baking</span>
+              <h3>Garden Herb Focaccia</h3>
+              <div class="card-meta">
+                <span><svg viewBox="0 0 24 24" fill="none"><circle cx="12" cy="12" r="9" stroke="currentColor" stroke-width="2"/><path d="M12 7v5l3.5 2" stroke="currentColor" stroke-width="2" stroke-linecap="round"/></svg>3 hrs</span>
+                <span><svg viewBox="0 0 24 24" fill="none"><path d="M4 20h4v-6H4v6zm6 0h4V10h-4v10zm6 0h4V4h-4v16z" fill="currentColor"/></svg>Medium</span>
+              </div>
+              <span class="card-link">View recipe →</span>
+            </div>
+          </article>
+
+        </div>
+        <p class="no-results" id="noResults">Nothing in the recipe box matches that — try a different search or category.</p>
+      </div>
+    </section>
+
+    <div class="floral-divider" aria-hidden="true">
+      <svg viewBox="0 0 220 26" fill="none">
+        <path d="M12 13 H208" stroke="#8a9a7b" stroke-width="1.6"/>
+        <ellipse cx="52" cy="9" rx="9" ry="4" fill="#8a9a7b" opacity="0.7" transform="rotate(-24 52 9)"/>
+        <ellipse cx="52" cy="17" rx="9" ry="4" fill="#8a9a7b" opacity="0.7" transform="rotate(24 52 17)"/>
+        <ellipse cx="168" cy="9" rx="9" ry="4" fill="#8a9a7b" opacity="0.7" transform="rotate(24 168 9)"/>
+        <ellipse cx="168" cy="17" rx="9" ry="4" fill="#8a9a7b" opacity="0.7" transform="rotate(-24 168 17)"/>
+        <g fill="#d8a7a0">
+          <circle cx="110" cy="6" r="4"/><circle cx="117" cy="10" r="4"/><circle cx="117" cy="16" r="4"/>
+          <circle cx="110" cy="20" r="4"/><circle cx="103" cy="16" r="4"/><circle cx="103" cy="10" r="4"/>
+        </g>
+        <circle cx="110" cy="13" r="3.4" fill="#c06b45"/>
+        <circle cx="12" cy="13" r="2.6" fill="#c06b45"/><circle cx="208" cy="13" r="2.6" fill="#c06b45"/>
+      </svg>
+    </div>
+
+    <!-- ======================= SHOP ======================= -->
+    <section class="section shop" id="shop">
+      <div class="container">
+        <div class="section-head reveal">
+          <p class="eyebrow">The Pantry Shop</p>
+          <h2>Take the Kitchen <em>Home</em></h2>
+          <p class="section-sub">Digital downloads — eBooks, collections, and printables. They land in your inbox the second you check out.</p>
+        </div>
+        <div class="shop-grid reveal">
+
+          <article class="product-card">
+            <div class="product-art">
+              <svg viewBox="0 0 120 120" fill="none" role="img" aria-label="eBook illustration">
+                <path d="M22 30 h76 a6 6 0 0 1 6 6 v54 a6 6 0 0 1 -6 6 h-76 z" fill="#c06b45"/>
+                <path d="M22 30 h76 a6 6 0 0 1 6 6 v54 a6 6 0 0 1 -6 6 h-76 z" stroke="#9c5636" stroke-width="3"/>
+                <path d="M30 38 h60 v44 h-60 z" fill="#faf4e8"/>
+                <path d="M60 38 v44" stroke="#e6d7bd" stroke-width="2"/>
+                <path d="M38 50 h16 M38 58 h16 M66 50 h16 M66 58 h16" stroke="#8a7360" stroke-width="2.5" stroke-linecap="round"/>
+                <circle cx="60" cy="82" r="7" fill="#8a9a7b"/>
+                <path d="M60 82 m-3.5 0 a3.5 3.5 0 1 0 7 0 a3.5 3.5 0 1 0 -7 0" stroke="#faf4e8" stroke-width="2" fill="none"/>
+              </svg>
+            </div>
+            <div class="product-body">
+              <h3>Cozy Weeknight Dinners eBook</h3>
+              <p>40 one-pot, one-pan, and 30-minute dinners for the nights when everyone's hungry <em>now</em>.</p>
+              <ul class="product-includes">
+                <li>40 tested recipes with photos</li>
+                <li>5-ingredient pantry staples list</li>
+                <li>Printable grocery lists</li>
+              </ul>
+              <div class="product-buy">
+                <span class="price">$12<small>instant download</small></span>
+                <!-- TIP: replace href="#" with your checkout link (Gumroad, Etsy, or Stripe) -->
+                <a class="btn btn-terra btn-small" href="#">Buy Now</a>
+              </div>
+            </div>
+          </article>
+
+          <article class="product-card featured">
+            <span class="product-flag">Bestseller</span>
+            <div class="product-art">
+              <svg viewBox="0 0 120 120" fill="none" role="img" aria-label="Baking collection illustration">
+                <rect x="34" y="26" width="52" height="70" rx="10" fill="#dce5d2" opacity="0.85"/>
+                <rect x="34" y="26" width="52" height="70" rx="10" stroke="#8a9a7b" stroke-width="3"/>
+                <rect x="30" y="18" width="60" height="14" rx="7" fill="#8a9a7b"/>
+                <circle cx="50" cy="52" r="10" fill="#e8b96f" stroke="#c98f3f" stroke-width="2.5"/>
+                <circle cx="70" cy="52" r="10" fill="#e8b96f" stroke="#c98f3f" stroke-width="2.5"/>
+                <circle cx="50" cy="72" r="10" fill="#e8b96f" stroke="#c98f3f" stroke-width="2.5"/>
+                <circle cx="70" cy="72" r="10" fill="#e8b96f" stroke="#c98f3f" stroke-width="2.5"/>
+                <circle cx="50" cy="52" r="2.4" fill="#8a5a24"/><circle cx="70" cy="72" r="2.4" fill="#8a5a24"/>
+                <circle cx="70" cy="52" r="2.4" fill="#8a5a24"/><circle cx="50" cy="72" r="2.4" fill="#8a5a24"/>
+              </svg>
+            </div>
+            <div class="product-body">
+              <h3>Holiday Baking Collection</h3>
+              <p>25 heirloom-worthy cookies, pies, and breads — plus printable gift tags for everything you give away.</p>
+              <ul class="product-includes">
+                <li>25 holiday recipes, step-by-step</li>
+                <li>Make-ahead &amp; freezer guide</li>
+                <li>12 printable gift tags</li>
+              </ul>
+              <div class="product-buy">
+                <span class="price">$14<small>instant download</small></span>
+                <!-- TIP: replace href="#" with your checkout link (Gumroad, Etsy, or Stripe) -->
+                <a class="btn btn-terra btn-small" href="#">Buy Now</a>
+              </div>
+            </div>
+          </article>
+
+          <article class="product-card">
+            <div class="product-art">
+              <svg viewBox="0 0 120 120" fill="none" role="img" aria-label="Meal planner illustration">
+                <rect x="34" y="22" width="52" height="76" rx="8" fill="#8a9a7b"/>
+                <rect x="34" y="22" width="52" height="76" rx="8" stroke="#5f7052" stroke-width="3"/>
+                <rect x="42" y="32" width="36" height="56" rx="4" fill="#faf4e8"/>
+                <rect x="52" y="16" width="16" height="12" rx="6" fill="#5f7052"/>
+                <path d="M48 44 h24 M48 52 h24 M48 60 h24 M48 68 h14" stroke="#c9b896" stroke-width="3" stroke-linecap="round"/>
+                <path d="M48 78 l5 5 9 -10" stroke="#c06b45" stroke-width="3" stroke-linecap="round" stroke-linejoin="round"/>
+              </svg>
+            </div>
+            <div class="product-body">
+              <h3>Printable Meal Planner Pack</h3>
+              <p>30 pages of weekly planners, pantry inventories, and freezer labels. Print once, use all year.</p>
+              <ul class="product-includes">
+                <li>Weekly &amp; monthly planners</li>
+                <li>Pantry &amp; freezer inventory sheets</li>
+                <li>US Letter + A4 sizes included</li>
+              </ul>
+              <div class="product-buy">
+                <span class="price">$8<small>instant download</small></span>
+                <!-- TIP: replace href="#" with your checkout link (Gumroad, Etsy, or Stripe) -->
+                <a class="btn btn-terra btn-small" href="#">Buy Now</a>
+              </div>
+            </div>
+          </article>
+
+        </div>
+        <p class="shop-note reveal">All products are digital — nothing ships, everything arrives instantly. <a href="#newsletter" class="inline-link">Join the newsletter</a> for 10% off your first order.</p>
+      </div>
+    </section>
+
+    <!-- ======================= ABOUT ======================= -->
+    <section class="section about" id="about">
+      <div class="container about-grid">
+        <div class="about-visual reveal" aria-hidden="true">
+          <div class="about-frame">
+            <svg viewBox="0 0 320 240" fill="none" role="img" aria-label="Cozy farmhouse kitchen illustration">
+              <rect x="0" y="0" width="320" height="240" rx="12" fill="#f6efe0"/>
+              <rect x="36" y="28" width="120" height="110" rx="8" fill="#8a9a7b"/>
+              <rect x="46" y="38" width="100" height="90" rx="4" fill="#f3e9d3"/>
+              <circle cx="120" cy="66" r="16" fill="#e8b96f"/>
+              <path d="M46 84 h100 M96 38 v90" stroke="#8a9a7b" stroke-width="5"/>
+              <rect x="24" y="28" width="22" height="110" rx="8" fill="#d8a7a0"/>
+              <rect x="150" y="28" width="22" height="110" rx="8" fill="#d8a7a0"/>
+              <rect x="196" y="60" width="92" height="10" rx="5" fill="#a9805a"/>
+              <rect x="206" y="34" width="20" height="26" rx="4" fill="#dce5d2" stroke="#8a9a7b" stroke-width="2.5"/>
+              <path d="M210 40 v14 M216 40 v14 M222 40 v14" stroke="#c9b896" stroke-width="2.5"/>
+              <rect x="232" y="38" width="20" height="22" rx="4" fill="#e8b96f" stroke="#c98f3f" stroke-width="2.5"/>
+              <rect x="258" y="30" width="18" height="30" rx="4" fill="#f6e4df" stroke="#d8a7a0" stroke-width="2.5"/>
+              <path d="M267 44 c -4 -8, 4 -10, 0 -18" stroke="#5f7052" stroke-width="2.5" stroke-linecap="round"/>
+              <ellipse cx="263" cy="32" rx="5" ry="2.6" fill="#8a9a7b" transform="rotate(-24 263 32)"/>
+              <path d="M20 176 h280" stroke="#a9805a" stroke-width="10" stroke-linecap="round"/>
+              <path d="M88 150 q3 -10 12 -12 q9 -2 12 6 q-3 10 -12 12 q-9 2 -12 -6 z" fill="#c06b45"/>
+              <path d="M88 150 q3 -10 12 -12" stroke="#9c5636" stroke-width="2.5" fill="none"/>
+              <rect x="112" y="146" width="8" height="14" rx="4" fill="#5f7052" transform="rotate(24 116 153)"/>
+              <path d="M196 176 v-34" stroke="#5f7052" stroke-width="3"/>
+              <path d="M196 150 c -10 -2, -16 -10, -16 -20 c 10 2, 16 10, 16 20 z" fill="#8a9a7b"/>
+              <path d="M196 150 c 10 -2, 16 -10, 16 -20 c -10 2, -16 10, -16 20 z" fill="#8a9a7b"/>
+              <path d="M186 142 h20 l-4 12 h-12 z" fill="#c06b45"/>
+              <circle cx="252" cy="196" r="18" fill="#f6e4df" stroke="#d8a7a0" stroke-width="2.5"/>
+              <path d="M244 190 q8 -6 16 0" stroke="#8a7360" stroke-width="2.5" stroke-linecap="round"/>
+            </svg>
+          </div>
+          <p class="about-note">from my kitchen to yours</p>
+        </div>
+        <div class="about-copy reveal">
+          <p class="eyebrow">About the Cook</p>
+          <h2>Hi, I'm <em>June.</em></h2>
+          <p>I cook the way my grandmother did — by feel, with what's in season, and always enough to share. This little corner of the internet is where I write it all down: the weeknight dinners that got us through soccer season, the breads I bake when the house feels too quiet, and the preserves I put up every August without fail.</p>
+          <p>I'm not a chef. I'm a mom with a well-loved Dutch oven, a garden that mostly cooperates, and strong opinions about butter. Everything here is <strong>tested in my real kitchen</strong>, with real timing, real messes, and honest notes about what I'd do differently.</p>
+          <ul class="check-list">
+            <li>Every recipe tested at least 3 times</li>
+            <li>Realistic timing — no "30-minute" meals that take an hour</li>
+            <li>Substitutions noted for picky eaters &amp; allergies</li>
+          </ul>
+          <p class="signature">— June</p>
+        </div>
+      </div>
+    </section>
+
+    <!-- ======================= TESTIMONIALS ======================= -->
+    <section class="section reviews" id="reviews">
+      <div class="container">
+        <div class="section-head reveal">
+          <p class="eyebrow">Kind Words</p>
+          <h2>From <em>Readers'</em> Kitchens</h2>
+        </div>
+        <div class="slider reveal" id="reviewSlider">
+          <div class="slides">
+            <blockquote class="slide active">
+              <div class="stars" aria-label="5 out of 5 stars">★★★★★</div>
+              <p>"The overnight cinnamon rolls made our Christmas morning. My kids now request them by name, and the make-ahead timing meant I actually got to drink my coffee hot."</p>
+              <footer>— Rachel M. <span>Bakes the cinnamon rolls monthly</span></footer>
+            </blockquote>
+            <blockquote class="slide">
+              <div class="stars" aria-label="5 out of 5 stars">★★★★★</div>
+              <p>"I've bought a lot of meal-planning printables and this is the first one I actually use. The freezer inventory sheet alone saved me from buying my third bag of frozen peas."</p>
+              <footer>— Denise K. <span>Meal Planner Pack customer</span></footer>
+            </blockquote>
+            <blockquote class="slide">
+              <div class="stars" aria-label="5 out of 5 stars">★★★★★</div>
+              <p>"June's tomato soup is the first recipe my teenage son asked me to teach him. The canning notes meant we put up twelve jars in September — winter us is very grateful."</p>
+              <footer>— Priya S. <span>Preserving convert</span></footer>
+            </blockquote>
+          </div>
+          <div class="slider-dots" role="tablist" aria-label="Choose review">
+            <button class="dot active" data-slide="0" aria-label="Review 1"></button>
+            <button class="dot" data-slide="1" aria-label="Review 2"></button>
+            <button class="dot" data-slide="2" aria-label="Review 3"></button>
+          </div>
+        </div>
+      </div>
+    </section>
+
+    <!-- ======================= NEWSLETTER ======================= -->
+    <section class="section" id="newsletter">
+      <div class="container">
+        <div class="news-card reveal">
+          <p class="eyebrow">The Sunday Letter</p>
+          <h2>One cozy recipe, <em>every Sunday.</em></h2>
+          <p>Join 12,000+ home cooks getting a seasonal recipe, a kitchen tip, and first dibs on new shop goodies — every Sunday morning, with your coffee.</p>
+          <!-- TO MAKE THIS FORM SEND EMAIL: create a free form endpoint at
+               https://formspree.io or https://usebasin.com, then change the
+               <form> tag to: <form action="https://formspree.io/f/YOUR_ID" method="POST"> -->
+          <form class="news-form" id="newsForm" novalidate>
+            <input type="email" id="nEmail" name="email" placeholder="you@example.com" aria-label="Email address" required>
+            <button class="btn btn-terra" type="submit">Subscribe</button>
+          </form>
+          <p class="form-msg" id="newsMsg" role="status"></p>
+          <p class="news-fine">No spam, ever. Unsubscribe anytime with one click.</p>
+        </div>
+      </div>
+    </section>
+
+  </main>
+
+  <!-- ======================= RECIPE MODAL ======================= -->
+  <div class="modal-overlay" id="recipeModal" aria-hidden="true">
+    <div class="modal" role="dialog" aria-modal="true" aria-labelledby="modalTitle">
+      <button class="modal-close" id="modalClose" aria-label="Close recipe">×</button>
+      <div class="modal-art" id="modalArt" aria-hidden="true"></div>
+      <div class="modal-body">
+        <p class="eyebrow" id="modalKicker">Recipe</p>
+        <h2 id="modalTitle">Recipe title</h2>
+        <div class="modal-meta" id="modalMeta"></div>
+        <div class="modal-actions">
+          <button class="btn btn-sage btn-small" id="printBtn">Print Recipe</button>
+        </div>
+        <h3>Ingredients</h3>
+        <p class="search-hint" style="padding-left:0; margin-bottom:0.8rem;">Tap an ingredient to check it off as you cook.</p>
+        <ul class="ing-list" id="modalIngredients"></ul>
+        <h3>Instructions</h3>
+        <ol class="step-list" id="modalSteps"></ol>
+        <div class="modal-note" id="modalNote" hidden></div>
+      </div>
+    </div>
+  </div>
+
+  <!-- ======================= FOOTER ======================= -->
+  <footer class="site-footer">
+    <div class="container footer-grid">
+      <div class="footer-brand">
+        <a href="#top" class="logo" aria-label="Hearth and Thyme home">
+          <svg class="logo-mark" viewBox="0 0 32 32" fill="none" aria-hidden="true">
+            <path d="M16 28 C 15 20, 15 12, 17 5" stroke="currentColor" stroke-width="2" stroke-linecap="round"/>
+            <path d="M16 22 C 12 21, 9 18, 8 14 C 12 15, 15 18, 16 22 Z" fill="currentColor" opacity="0.75"/>
+            <path d="M16 22 C 20 21, 23 18, 24 14 C 20 15, 17 18, 16 22 Z" fill="currentColor" opacity="0.75"/>
+            <path d="M16 15 C 13 14, 11 12, 10 9 C 13 10, 15 12, 16 15 Z" fill="currentColor" opacity="0.55"/>
+            <path d="M16 15 C 19 14, 21 12, 22 9 C 19 10, 17 12, 16 15 Z" fill="currentColor" opacity="0.55"/>
+          </svg>
+          <span>Hearth &amp; Thyme</span>
+        </a>
+        <p>A cozy cooking journal — from-scratch recipes, seasonal preserving, and a little shop of kitchen printables.</p>
+        <div class="socials">
+          <a href="#" aria-label="Instagram"><svg viewBox="0 0 24 24" fill="none"><rect x="3" y="3" width="18" height="18" rx="5" stroke="currentColor" stroke-width="1.8"/><circle cx="12" cy="12" r="4" stroke="currentColor" stroke-width="1.8"/><circle cx="17.2" cy="6.8" r="1.3" fill="currentColor"/></svg></a>
+          <a href="#" aria-label="Pinterest"><svg viewBox="0 0 24 24" fill="none"><circle cx="12" cy="12" r="9" stroke="currentColor" stroke-width="1.8"/><path d="M12 7c-2.8 0-4.5 2-4.5 4.2 0 1.2.6 2.3 1.7 2.7l.6-1.9c-.3-.4-.5-.9-.5-1.4 0-1.6 1.2-2.9 2.9-2.9 1.6 0 2.7 1 2.7 2.4 0 1.8-.8 3.4-2 3.4-.7 0-1.2-.5-1-1.2l.5-1.9 -1.2 5" stroke="currentColor" stroke-width="1.6" stroke-linecap="round" stroke-linejoin="round"/></svg></a>
+          <a href="#" aria-label="Facebook"><svg viewBox="0 0 24 24" fill="none"><path d="M14 8h2V5h-2a3 3 0 0 0-3 3v2H9v3h2v6h3v-6h2l1-3h-3V8.5c0-.3.2-.5.5-.5z" stroke="currentColor" stroke-width="1.8" stroke-linejoin="round"/></svg></a>
+        </div>
+      </div>
+      <nav class="footer-nav" aria-label="Footer">
+        <h4>Explore</h4>
+        <a href="#recipes">Recipe Box</a>
+        <a href="#shop">Pantry Shop</a>
+        <a href="#about">About June</a>
+        <a href="#reviews">Reviews</a>
+      </nav>
+      <nav class="footer-nav" aria-label="Shop">
+        <h4>Shop</h4>
+        <a href="#shop">Weeknight Dinners eBook</a>
+        <a href="#shop">Holiday Baking Collection</a>
+        <a href="#shop">Meal Planner Pack</a>
+        <a href="#newsletter">The Sunday Letter</a>
+      </nav>
+      <div class="footer-contact">
+        <h4>Say Hello</h4>
+        <p><a href="mailto:hello@hearthandthyme.com">hello@hearthandthyme.com</a><br>Recipe questions welcome —<br>I read every email.</p>
+      </div>
+    </div>
+    <div class="container footer-base">
+      <p>© <span id="year">2026</span> Hearth &amp; Thyme. All rights reserved.</p>
+      <a href="#top" class="to-top">Back to top ↑</a>
+    </div>
+  </footer>
+
+  <script src="script.js"></script>
+</body>
+</html>
