@@ -1,5 +1,5 @@
 /* ============================================================
-   SPARK & SHINE TEMPLATE: script.js
+   BUTTER & BLOOM TEMPLATE — script.js
    Vanilla JS, no dependencies. Each feature is commented so
    buyers can tweak or remove anything with confidence.
    ============================================================ */
@@ -52,7 +52,7 @@
     revealEls.forEach(function (el) { el.classList.add("visible"); });
   }
 
-  /* ---------- Service checklist tabs ---------- */
+  /* ---------- Menu tabs ---------- */
   var tabs = document.querySelectorAll(".tab");
   var panels = document.querySelectorAll(".tab-panel");
   tabs.forEach(function (tab) {
@@ -93,63 +93,34 @@
   });
   autoPlay();
 
-  /* ---------- Before / after drag slider ---------- */
-  var baSlider = document.getElementById("baSlider");
-  var baBefore = document.getElementById("baBefore");
-  var baHandle = document.getElementById("baHandle");
-  var dragging = false;
-
-  function setBA(clientX) {
-    var rect = baSlider.getBoundingClientRect();
-    var pct = ((clientX - rect.left) / rect.width) * 100;
-    pct = Math.max(4, Math.min(96, pct));
-    baBefore.style.width = pct + "%";
-    baHandle.style.left = pct + "%";
-  }
-  baHandle.addEventListener("pointerdown", function (e) {
-    dragging = true;
-    try { baHandle.setPointerCapture(e.pointerId); } catch (err) { /* older browsers */ }
-    setBA(e.clientX);
-  });
-  baHandle.addEventListener("pointermove", function (e) {
-    if (dragging) setBA(e.clientX);
-  });
-  ["pointerup", "pointercancel"].forEach(function (evt) {
-    baHandle.addEventListener(evt, function () { dragging = false; });
-  });
-  // Tapping the image also moves the divider
-  baSlider.addEventListener("pointerdown", function (e) {
-    if (e.target !== baHandle && !baHandle.contains(e.target)) setBA(e.clientX);
-  });
-
   /* ---------- FAQ accordion ---------- */
-  document.querySelectorAll(".faq-item").forEach(function (item) {
-    var q = item.querySelector(".faq-q");
-    var a = item.querySelector(".faq-a");
-    q.addEventListener("click", function () {
+  var faqItems = document.querySelectorAll(".faq-item");
+  faqItems.forEach(function (item) {
+    var question = item.querySelector(".faq-q");
+    var answer = item.querySelector(".faq-a");
+    question.addEventListener("click", function () {
       var isOpen = item.classList.contains("open");
-      // Close any open item first (accordion behavior)
-      document.querySelectorAll(".faq-item.open").forEach(function (other) {
+      // Close any other open item (accordion behavior)
+      faqItems.forEach(function (other) {
         other.classList.remove("open");
         other.querySelector(".faq-a").style.maxHeight = null;
         other.querySelector(".faq-q").setAttribute("aria-expanded", "false");
       });
       if (!isOpen) {
         item.classList.add("open");
-        a.style.maxHeight = a.scrollHeight + "px";
-        q.setAttribute("aria-expanded", "true");
+        answer.style.maxHeight = answer.scrollHeight + "px";
+        question.setAttribute("aria-expanded", "true");
       }
     });
   });
 
-  /* ---------- Estimate request form ----------
-     Front-end validation + friendly confirmation.
-     This is a template demo, so the form does not send anywhere yet.
+  /* ---------- Order inquiry form ----------
+     Front-end validation + friendly demo confirmation.
      To receive real submissions, point the <form> at a free
-     endpoint (see the HTML comment above the form), then delete
+     endpoint (see the HTML comment above the form) — then delete
      the e.preventDefault() line below so the form submits normally. */
-  var form = document.getElementById("estimateForm");
-  var msg = document.getElementById("estimateMsg");
+  var form = document.getElementById("orderForm");
+  var msg = document.getElementById("formMsg");
 
   // Simple email check (good enough for front-end validation)
   function emailLooksValid(value) {
@@ -168,16 +139,17 @@
     });
 
     if (!valid) {
-      msg.textContent = "Please fill in your name, a valid email, and the home details.";
+      msg.textContent = "Please add your name, a valid email, an event date, servings, and a cake type.";
       msg.className = "form-msg error";
       return;
     }
 
-    var name = document.getElementById("eName").value.trim().split(" ")[0];
-    var service = document.getElementById("eService").value;
+    var name = document.getElementById("oName").value.trim().split(" ")[0];
+    var allergyNote = document.getElementById("oAllergy").checked
+      ? " We noted the allergy flag and will contact you about ingredients first."
+      : "";
     msg.textContent =
-      "Thanks, " + name + "! Your " + service.toLowerCase() +
-      " estimate request is in. Expect a firm written quote within one business day.";
+      "Thanks, " + name + "! Your inquiry is on its way — we'll reply within one business day with a quote." + allergyNote;
     msg.className = "form-msg success";
     form.reset();
   });
