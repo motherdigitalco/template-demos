@@ -1,0 +1,626 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Butter &amp; Bloom  -  Custom Cake Bakery</title>
+  <meta name="description" content="Butter & Bloom is a neighborhood bakery specializing in custom celebration cakes, wedding tiers, cupcakes, and everyday treats. Inquire about your custom cake today.">
+
+  <!-- ============================================================
+       BUTTER & BLOOM TEMPLATE  -  QUICK CUSTOMIZATION
+       ------------------------------------------------------------
+       1. BAKERY NAME ....: search for "Butter & Bloom" and replace
+       2. PHONE ..........: search for "+1 (555) 214-8890"
+       3. EMAIL ..........: search for "hello@butterandbloom.shop"
+       4. ADDRESS ........: search for "418 Sugar Maple Ave"
+       5. HOURS ..........: edit the "Visit Us" section below
+       6. MENU & PRICES ..: edit the "Menu" section below
+       7. FLAVORS ........: edit the "Custom Cakes" section below
+       8. COLORS & FONTS .: edit the :root variables in styles.css
+       9. ORDER FORM .....: point the form to Formspree/Basin  - 
+                           see the comment above the <form> tag
+       ============================================================ -->
+
+  <link rel="preconnect" href="https://fonts.googleapis.com">
+  <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+  <link href="https://fonts.googleapis.com/css2?family=Fraunces:ital,opsz,wght@0,9..144,400;0,9..144,500;0,9..144,600;0,9..144,700;1,9..144,400;1,9..144,500&family=Inter:wght@300;400;500;600&display=swap" rel="stylesheet">
+  <link rel="stylesheet" href="styles.css">
+</head>
+<body>
+
+  <!-- ======================= DEMO BANNER (remove on your live site) ======================= -->
+  <div class="demo-banner">TEMPLATE DEMO  -  design preview only. Forms do not send anything and buttons do not check out.</div>
+
+  <!-- ======================= HEADER ======================= -->
+  <header class="site-header" id="siteHeader">
+    <div class="container header-inner">
+      <a href="#top" class="logo" aria-label="Butter and Bloom home">
+        <svg class="logo-mark" viewBox="0 0 32 32" fill="none" aria-hidden="true">
+          <path d="M6 22h20" stroke="currentColor" stroke-width="2" stroke-linecap="round"/>
+          <path d="M9 22v-5.5A6.5 6.5 0 0 1 16 10a6.5 6.5 0 0 1 7 6.5V22" stroke="currentColor" stroke-width="2" stroke-linejoin="round"/>
+          <path d="M16 10V6.5M13.5 4.5c1 1.2 4 1.2 5 0" stroke="currentColor" stroke-width="1.8" stroke-linecap="round"/>
+          <circle cx="12" cy="17.5" r="1" fill="currentColor"/><circle cx="16.5" cy="18.5" r="1" fill="currentColor"/><circle cx="20" cy="17" r="1" fill="currentColor"/>
+        </svg>
+        <span>Butter &amp; Bloom</span>
+      </a>
+      <nav class="main-nav" aria-label="Primary">
+        <a href="#menu">Menu</a>
+        <a href="#custom">Custom Cakes</a>
+        <a href="#gallery">Gallery</a>
+        <a href="#weddings">Weddings</a>
+        <a href="#faq">FAQ</a>
+        <a href="#visit">Visit</a>
+      </nav>
+      <div class="header-actions">
+        <a class="btn btn-small btn-rose" href="#">Order Inquiry</a>
+        <button class="nav-toggle" id="navToggle" aria-label="Open menu" aria-expanded="false">
+          <span></span><span></span><span></span>
+        </button>
+      </div>
+    </div>
+    <nav class="mobile-nav" id="mobileNav" aria-label="Mobile">
+      <a href="#menu">Menu</a>
+      <a href="#custom">Custom Cakes</a>
+      <a href="#gallery">Gallery</a>
+      <a href="#weddings">Weddings</a>
+      <a href="#faq">FAQ</a>
+      <a href="#visit">Visit</a>
+      <a class="btn btn-rose" href="#">Order Inquiry</a>
+    </nav>
+  </header>
+
+  <main id="top">
+
+    <!-- ======================= HERO ======================= -->
+    <section class="hero">
+      <div class="container hero-grid">
+        <div class="hero-copy reveal">
+          <p class="eyebrow">Custom Cake Bakery  -  Est. 2016</p>
+          <h1>Cakes worth<br><em>celebrating.</em></h1>
+          <p class="lede">Custom celebration cakes, wedding tiers, and everyday treats baked from scratch each morning. Tell us your vision and we will bake it into something unforgettable.</p>
+          <div class="hero-ctas">
+            <a class="btn btn-rose" href="#">Order Inquiry</a>
+            <a class="btn btn-outline" href="#menu">View the Menu</a>
+          </div>
+          <ul class="hero-stats">
+            <li><strong>400+</strong><span>custom cakes a year</span></li>
+            <li><strong>24</strong><span>flavors &amp; fillings</span></li>
+            <li><strong>4.9 ★</strong><span>1,800+ reviews</span></li>
+          </ul>
+        </div>
+        <div class="hero-visual reveal" aria-hidden="true">
+          <div class="cake-stage">
+            <div class="cake-glow"></div>
+            <svg class="cake-svg" viewBox="0 0 320 360" fill="none">
+              <!-- plate -->
+              <ellipse cx="160" cy="318" rx="128" ry="24" fill="#e8d3bd"/>
+              <ellipse cx="160" cy="312" rx="128" ry="24" fill="#f6e7d3"/>
+              <!-- bottom tier -->
+              <rect x="86" y="216" width="148" height="96" rx="10" fill="#f3e2cd"/>
+              <rect x="86" y="216" width="148" height="20" rx="10" fill="#d96c75"/>
+              <path d="M86 250 q 12 14 24 0 q 12 14 24 0 q 12 14 24 0 q 12 14 24 0 q 12 14 24 0 q 12 14 24 0" stroke="#d96c75" stroke-width="6" fill="none" stroke-linecap="round"/>
+              <!-- middle tier -->
+              <rect x="106" y="140" width="108" height="76" rx="9" fill="#f8ecda"/>
+              <rect x="106" y="140" width="108" height="16" rx="8" fill="#b4475d"/>
+              <path d="M106 172 q 11 12 22 0 q 11 12 22 0 q 11 12 22 0 q 11 12 22 0 q 11 12 22 0" stroke="#b4475d" stroke-width="5" fill="none" stroke-linecap="round"/>
+              <!-- top tier -->
+              <rect x="126" y="82" width="68" height="58" rx="8" fill="#f3e2cd"/>
+              <rect x="126" y="82" width="68" height="13" rx="6" fill="#d96c75"/>
+              <!-- topper flowers -->
+              <g>
+                <circle cx="160" cy="66" r="10" fill="#d96c75"/>
+                <circle cx="148" cy="58" r="7" fill="#e89aa0"/>
+                <circle cx="172" cy="58" r="7" fill="#e89aa0"/>
+                <circle cx="160" cy="48" r="6" fill="#e89aa0"/>
+                <circle cx="160" cy="61" r="3.5" fill="#fdf6ec"/>
+              </g>
+              <!-- candles -->
+              <rect x="112" y="46" width="7" height="36" rx="3" fill="#7ba05b"/>
+              <rect x="201" y="46" width="7" height="36" rx="3" fill="#7ba05b"/>
+              <ellipse class="flame" cx="115.5" cy="40" rx="5" ry="8" fill="#f2b134"/>
+              <ellipse class="flame f2" cx="204.5" cy="40" rx="5" ry="8" fill="#f2b134"/>
+            </svg>
+            <div class="cake-card">
+              <p class="cake-card-title">This week's favorite</p>
+              <p class="cake-card-text">Strawberry Cloud<br><span>vanilla bean · fresh berries</span></p>
+            </div>
+          </div>
+        </div>
+      </div>
+    </section>
+
+    <!-- ======================= MARQUEE ======================= -->
+    <div class="marquee" aria-hidden="true">
+      <div class="marquee-track">
+        <span>Custom Celebration Cakes</span><i>●</i><span>Wedding Tiers</span><i>●</i><span>Baked From Scratch</span><i>●</i><span>Cupcakes</span><i>●</i><span>Cookies &amp; Bars</span><i>●</i><span>Gluten-Free Options</span><i>●</i>
+        <span>Custom Celebration Cakes</span><i>●</i><span>Wedding Tiers</span><i>●</i><span>Baked From Scratch</span><i>●</i><span>Cupcakes</span><i>●</i><span>Cookies &amp; Bars</span><i>●</i><span>Gluten-Free Options</span><i>●</i>
+      </div>
+    </div>
+
+    <!-- ======================= STORY ======================= -->
+    <section class="section story" id="story">
+      <div class="container story-grid">
+        <div class="story-visual reveal" aria-hidden="true">
+          <!-- Pure-CSS cake box -->
+          <div class="box">
+            <div class="box-lid"></div>
+            <div class="box-label">
+              <p class="box-brand">Butter &amp; Bloom</p>
+              <p class="box-origin">Baked from scratch daily</p>
+              <div class="roast-meter" aria-hidden="true">
+                <span class="rm-label">Butter</span>
+                <span class="rm-dots"><i class="on"></i><i class="on"></i><i class="on"></i><i class="on"></i><i class="on"></i></span>
+                <span class="rm-value">Real</span>
+              </div>
+              <p class="box-notes">no mixes, no shortcuts</p>
+              <p class="box-weight">418 Sugar Maple Ave</p>
+            </div>
+          </div>
+          <div class="story-stamp">
+            <span class="stamp-num">100%</span>
+            <span class="stamp-text">from<br>scratch</span>
+          </div>
+        </div>
+        <div class="story-copy reveal">
+          <p class="eyebrow">Our Story</p>
+          <h2>Baked like it<br>matters, <em>because it does.</em></h2>
+          <p>Butter &amp; Bloom started in 2016 with a home oven, a stand mixer, and a stubborn belief: a celebration cake should taste as good as it looks. Everything is baked from scratch with real butter, farm eggs, and seasonal fruit. No mixes, no frozen layers, no shortcuts.</p>
+          <ul class="check-list">
+            <li>Baked fresh every morning, never frozen</li>
+            <li>Real butter, real vanilla, seasonal fruit</li>
+            <li>Custom designs sketched with you, not from a catalog</li>
+          </ul>
+          <p class="signature"> -  Marigold Lane, founder &amp; head baker</p>
+        </div>
+      </div>
+    </section>
+
+    <!-- ======================= MENU ======================= -->
+    <section class="section menu" id="menu">
+      <div class="container">
+        <div class="section-head reveal">
+          <p class="eyebrow">Taste</p>
+          <h2>The <em>Menu</em></h2>
+          <p class="section-sub">Available daily in the case. Custom flavors and sizes are always possible, just ask.</p>
+        </div>
+
+        <div class="tabs reveal" role="tablist" aria-label="Menu categories">
+          <button class="tab active" role="tab" aria-selected="true" data-tab="cakes">Signature Cakes</button>
+          <button class="tab" role="tab" aria-selected="false" data-tab="cupcakes">Cupcakes</button>
+          <button class="tab" role="tab" aria-selected="false" data-tab="cookies">Cookies &amp; Bars</button>
+          <button class="tab" role="tab" aria-selected="false" data-tab="seasonal">Seasonal</button>
+        </div>
+
+        <div class="tab-panels reveal">
+          <div class="tab-panel active" id="panel-cakes" role="tabpanel">
+            <ul class="price-list">
+              <li><span class="pl-name">Strawberry Cloud <small>vanilla bean cake, macerated strawberries, whipped cream</small></span><span class="pl-dots"></span><span class="pl-price">$42</span></li>
+              <li><span class="pl-name">Midnight Chocolate <small>dark cocoa layers, chocolate ganache, sea salt</small></span><span class="pl-dots"></span><span class="pl-price">$44</span></li>
+              <li><span class="pl-name">Lemon Elderflower <small>lemon sponge, elderflower syrup, mascarpone</small></span><span class="pl-dots"></span><span class="pl-price">$46</span></li>
+              <li><span class="pl-name">Carrot &amp; Spice <small>brown butter frosting, toasted walnuts</small></span><span class="pl-dots"></span><span class="pl-price">$42</span></li>
+              <li><span class="pl-name">Cookies &amp; Cream <small>chocolate chip layers, cookie crumb buttercream</small></span><span class="pl-dots"></span><span class="pl-price">$44</span></li>
+              <li><span class="pl-name">Funfetti Classic <small>vanilla confetti layers, vanilla buttercream</small></span><span class="pl-dots"></span><span class="pl-price">$40</span></li>
+            </ul>
+          </div>
+          <div class="tab-panel" id="panel-cupcakes" role="tabpanel">
+            <ul class="price-list">
+              <li><span class="pl-name">Vanilla Bean <small>madagascar vanilla, vanilla buttercream</small></span><span class="pl-dots"></span><span class="pl-price">$3.75</span></li>
+              <li><span class="pl-name">Chocolate Bliss <small>dark chocolate, fudge core, ganache swirl</small></span><span class="pl-dots"></span><span class="pl-price">$4.00</span></li>
+              <li><span class="pl-name">Salted Caramel <small>caramel filling, brown sugar buttercream</small></span><span class="pl-dots"></span><span class="pl-price">$4.25</span></li>
+              <li><span class="pl-name">Lemon Drop <small>lemon curd center, torched meringue</small></span><span class="pl-dots"></span><span class="pl-price">$4.25</span></li>
+              <li><span class="pl-name">Red Velvet <small>cream cheese frosting, cocoa crumb</small></span><span class="pl-dots"></span><span class="pl-price">$4.00</span></li>
+              <li><span class="pl-name">Half Dozen Box <small>mix and match any flavors</small></span><span class="pl-dots"></span><span class="pl-price">$21</span></li>
+            </ul>
+            <p class="panel-note">Cupcakes by the dozen for parties  -  order 48 hours ahead.</p>
+          </div>
+          <div class="tab-panel" id="panel-cookies" role="tabpanel">
+            <ul class="price-list">
+              <li><span class="pl-name">Brown Butter Chocolate Chip <small>flaky sea salt</small></span><span class="pl-dots"></span><span class="pl-price">$3.50</span></li>
+              <li><span class="pl-name">Snickerdoodle <small>cinnamon sugar, soft center</small></span><span class="pl-dots"></span><span class="pl-price">$3.00</span></li>
+              <li><span class="pl-name">Decorated Sugar Cookies <small>custom colors and shapes</small></span><span class="pl-dots"></span><span class="pl-price">$4.50</span></li>
+              <li><span class="pl-name">Oatmeal Cream Pie <small>spiced oats, marshmallow filling</small></span><span class="pl-dots"></span><span class="pl-price">$4.00</span></li>
+              <li><span class="pl-name">Brownie Slab <small>fudgy, espresso-kissed</small></span><span class="pl-dots"></span><span class="pl-price">$4.25</span></li>
+              <li><span class="pl-name">Blondie Bar <small>brown sugar, white chocolate</small></span><span class="pl-dots"></span><span class="pl-price">$3.75</span></li>
+            </ul>
+          </div>
+          <div class="tab-panel" id="panel-seasonal" role="tabpanel">
+            <ul class="price-list">
+              <li><span class="pl-name">Apple Cider Donut Cake <small>cider-soaked layers, cinnamon sugar</small></span><span class="pl-dots"></span><span class="pl-price">$46</span></li>
+              <li><span class="pl-name">Pumpkin Spice Layer <small>cream cheese frosting, candied pecans</small></span><span class="pl-dots"></span><span class="pl-price">$44</span></li>
+              <li><span class="pl-name">Peppermint Bark Cake <small>chocolate, peppermint buttercream</small></span><span class="pl-dots"></span><span class="pl-price">$46</span></li>
+              <li><span class="pl-name">Peach Bellini Cake <small>summer peaches, prosecco syrup</small></span><span class="pl-dots"></span><span class="pl-price">$48</span></li>
+            </ul>
+            <p class="panel-note">Seasonal flavors change with the farmers market. Follow along for the current lineup.</p>
+          </div>
+        </div>
+
+        <p class="menu-note reveal">Need a dozen for the office or a dessert table for fifty? <a href="#">Ask about bulk orders</a>.</p>
+      </div>
+    </section>
+
+    <!-- ======================= CUSTOM CAKES ======================= -->
+    <section class="section custom" id="custom">
+      <div class="container">
+        <div class="section-head reveal">
+          <p class="eyebrow">Made For You</p>
+          <h2>Custom <em>Cakes</em></h2>
+          <p class="section-sub">Birthdays, showers, graduations, and every excuse in between. If you can dream it, we can bake it.</p>
+        </div>
+
+        <div class="steps reveal">
+          <div class="step">
+            <span class="step-num">1</span>
+            <h3>Inquire</h3>
+            <p>Send the order inquiry form below with your date, servings, and ideas. We reply within one business day.</p>
+          </div>
+          <div class="step">
+            <span class="step-num">2</span>
+            <h3>Design</h3>
+            <p>We sketch your cake together, choose flavors and fillings, and confirm every detail in writing.</p>
+          </div>
+          <div class="step">
+            <span class="step-num">3</span>
+            <h3>Taste</h3>
+            <p>Wedding and large orders include a tasting box of six flavors so you can choose with confidence.</p>
+          </div>
+          <div class="step">
+            <span class="step-num">4</span>
+            <h3>Celebrate</h3>
+            <p>We bake, decorate, and box your cake for pickup, or deliver and set it up at your venue.</p>
+          </div>
+        </div>
+
+        <div class="custom-grid reveal">
+          <div class="custom-card">
+            <h3>Starting Prices</h3>
+            <ul class="price-mini">
+              <li><span>6-inch (serves 8 to 10)</span><strong>from $68</strong></li>
+              <li><span>8-inch (serves 14 to 20)</span><strong>from $96</strong></li>
+              <li><span>10-inch (serves 22 to 30)</span><strong>from $128</strong></li>
+              <li><span>Two-tier (serves 30 to 45)</span><strong>from $185</strong></li>
+              <li><span>Sheet cake (serves 40 to 60)</span><strong>from $145</strong></li>
+              <li><span>Wedding tiers (100+ servings)</span><strong>from $5.50 / serving</strong></li>
+            </ul>
+            <p class="card-note">Final pricing depends on design complexity, sugar flowers, and hand-painted details.</p>
+          </div>
+          <div class="custom-card">
+            <h3>Flavors &amp; Fillings</h3>
+            <div class="flavor-cols">
+              <div>
+                <h4>Cake flavors</h4>
+                <ul>
+                  <li>Vanilla bean</li>
+                  <li>Chocolate fudge</li>
+                  <li>Lemon</li>
+                  <li>Red velvet</li>
+                  <li>Carrot spice</li>
+                  <li>Funfetti</li>
+                  <li>Coconut</li>
+                  <li>Almond</li>
+                </ul>
+              </div>
+              <div>
+                <h4>Fillings</h4>
+                <ul>
+                  <li>Vanilla buttercream</li>
+                  <li>Chocolate ganache</li>
+                  <li>Salted caramel</li>
+                  <li>Fresh strawberry</li>
+                  <li>Lemon curd</li>
+                  <li>Raspberry preserves</li>
+                  <li>Cream cheese</li>
+                  <li>Cookies &amp; cream</li>
+                </ul>
+              </div>
+            </div>
+            <p class="card-note">Gluten-free and vegan options available in select flavors.</p>
+          </div>
+        </div>
+
+        <div class="policy-grid reveal">
+          <div class="policy-card">
+            <h3>Lead Times</h3>
+            <p>Standard custom cakes need <strong>7 days</strong> notice. Two-tier and sculpted cakes need <strong>14 days</strong>. Wedding cakes book <strong>3 to 6 months</strong> ahead, especially May through October. Rush orders are sometimes possible for a 25% fee, just ask.</p>
+          </div>
+          <div class="policy-card">
+            <h3>Deposit &amp; Payment</h3>
+            <p>A <strong>50% non-refundable deposit</strong> reserves your date. The balance is due at pickup or delivery. We accept cards, cash, and bank transfer. Your date is not held until the deposit is paid.</p>
+          </div>
+          <div class="policy-card allergy">
+            <h3>Allergy Notice</h3>
+            <p><strong>Allergy disclaimer:</strong> our kitchen handles wheat, dairy, eggs, nuts, and soy. While we take care with every order, we cannot guarantee a completely allergen-free environment. Please tell us about every allergy in the inquiry form so we can advise you honestly.</p>
+          </div>
+        </div>
+      </div>
+    </section>
+
+    <!-- ======================= ORDER FORM ======================= -->
+    <section class="section order" id="order">
+      <div class="container order-card reveal">
+        <div class="order-copy">
+          <p class="eyebrow">Start Here</p>
+          <h2>Custom Cake <em>Order Inquiry</em></h2>
+          <p>Tell us about your celebration and we will reply within one business day with availability, a quote, and next steps.</p>
+          <ul class="check-list">
+            <li>No payment due with the inquiry</li>
+            <li>Free design sketch with every quote</li>
+            <li>Tasting boxes for wedding orders</li>
+          </ul>
+          <p class="order-phone">Prefer to talk? Call <a href="tel:+15552148890">+1 (555) 214-8890</a>.</p>
+        </div>
+        <!-- TO MAKE THIS FORM SEND EMAIL: create a free form endpoint at
+             https://formspree.io or https://usebasin.com, then change the
+             <form> tag to: <form action="https://formspree.io/f/YOUR_ID" method="POST"> -->
+        <form class="order-form" id="orderForm" novalidate>
+          <div class="field-row">
+            <div class="field">
+              <label for="oName">Full name</label>
+              <input id="oName" name="name" type="text" placeholder="Alex Rivera" required>
+            </div>
+            <div class="field">
+              <label for="oEmail">Email</label>
+              <input id="oEmail" name="email" type="email" placeholder="alex@example.com" required>
+            </div>
+          </div>
+          <div class="field-row">
+            <div class="field">
+              <label for="oDate">Event date</label>
+              <input id="oDate" name="event_date" type="date" required>
+            </div>
+            <div class="field">
+              <label for="oServings">Servings needed</label>
+              <select id="oServings" name="servings" required>
+                <option value="" disabled selected>Choose…</option>
+                <option>8 to 10</option>
+                <option>14 to 20</option>
+                <option>22 to 30</option>
+                <option>30 to 45</option>
+                <option>60+</option>
+                <option>Wedding (100+)</option>
+              </select>
+            </div>
+          </div>
+          <div class="field">
+            <label for="oType">Cake type</label>
+            <select id="oType" name="cake_type" required>
+              <option value="" disabled selected>Choose a type…</option>
+              <option>Birthday cake</option>
+              <option>Wedding cake</option>
+              <option>Baby or bridal shower</option>
+              <option>Graduation</option>
+              <option>Cupcakes for an event</option>
+              <option>Something else</option>
+            </select>
+          </div>
+          <div class="field">
+            <label for="oDesign">Design ideas <span class="opt">(optional)</span></label>
+            <textarea id="oDesign" name="design" rows="3" placeholder="Colors, theme, flavors you love, inspiration…"></textarea>
+          </div>
+          <div class="field">
+            <label>Pickup or delivery</label>
+            <div class="radio-row">
+              <label class="radio"><input type="radio" name="fulfillment" value="pickup" checked> Pickup</label>
+              <label class="radio"><input type="radio" name="fulfillment" value="delivery"> Delivery</label>
+            </div>
+          </div>
+          <label class="checkbox">
+            <input type="checkbox" id="oAllergy">
+            <span>Someone eating this cake has a food allergy. Please contact me about ingredients before confirming.</span>
+          </label>
+          <button class="btn btn-cocoa" type="submit">Send Order Inquiry</button>
+          <p class="form-msg" id="formMsg" role="status"></p>
+        </form>
+      </div>
+    </section>
+
+    <!-- ======================= GALLERY ======================= -->
+    <section class="section gallery" id="gallery">
+      <div class="container">
+        <div class="section-head reveal">
+          <p class="eyebrow">Fresh From the Oven</p>
+          <h2>The <em>Gallery</em></h2>
+          <p class="section-sub">A few recent favorites. Follow <a href="#" class="inline-link">@butterandbloom</a> for daily bakes.</p>
+        </div>
+        <div class="gallery-grid reveal">
+          <figure class="g-tile g-1"><figcaption>Floral Birthday</figcaption></figure>
+          <figure class="g-tile g-2"><figcaption>Chocolate Drip</figcaption></figure>
+          <figure class="g-tile g-3"><figcaption>Wedding Trio</figcaption></figure>
+          <figure class="g-tile g-4"><figcaption>Cupcake Dozen</figcaption></figure>
+          <figure class="g-tile g-5"><figcaption>Lemon Naked Cake</figcaption></figure>
+          <figure class="g-tile g-6"><figcaption>Cookie Box</figcaption></figure>
+        </div>
+        <!-- TIP: replace the gradient tiles above with your own photos:
+             <figure class="g-tile"><img src="images/cake-1.jpg" alt="..."><figcaption>...</figcaption></figure> -->
+      </div>
+    </section>
+
+    <!-- ======================= WEDDINGS ======================= -->
+    <section class="section weddings" id="weddings">
+      <div class="container weddings-grid">
+        <div class="weddings-copy reveal">
+          <p class="eyebrow">Weddings &amp; Events</p>
+          <h2>Your day, <em>baked beautifully.</em></h2>
+          <p>From intimate ceremonies to three-hundred-guest receptions, we design wedding cakes that photograph like a dream and taste even better. Every wedding order includes a consultation, a sketch, and a tasting box.</p>
+          <ul class="check-list">
+            <li>Consultation and custom sketch included</li>
+            <li>Tasting box with six flavors</li>
+            <li>Delivery, setup, and stand rental available</li>
+            <li>Dessert tables and favors to match</li>
+          </ul>
+          <a class="btn btn-rose" href="#">Book a Tasting</a>
+        </div>
+        <div class="weddings-cards reveal" aria-hidden="true">
+          <div class="wed-card">
+            <p class="wed-tier">Two-Tier</p>
+            <p class="wed-price">from $340</p>
+            <p class="wed-desc">Serves 40 to 55. Perfect for intimate weddings and showers.</p>
+          </div>
+          <div class="wed-card featured">
+            <p class="wed-tier">Three-Tier</p>
+            <p class="wed-price">from $520</p>
+            <p class="wed-desc">Serves 75 to 100. Our most requested wedding size.</p>
+          </div>
+          <div class="wed-card">
+            <p class="wed-tier">Grand Four-Tier</p>
+            <p class="wed-price">from $780</p>
+            <p class="wed-desc">Serves 130 to 180. For the big celebration.</p>
+          </div>
+        </div>
+      </div>
+    </section>
+
+    <!-- ======================= TESTIMONIALS ======================= -->
+    <section class="section reviews" id="reviews">
+      <div class="container">
+        <div class="section-head reveal">
+          <p class="eyebrow">Kind Words</p>
+          <h2>Sweet <em>Reviews</em></h2>
+        </div>
+        <div class="slider reveal" id="reviewSlider">
+          <div class="slides">
+            <blockquote class="slide active">
+              <div class="stars" aria-label="5 out of 5 stars">★★★★★</div>
+              <p>"The cake was the talk of the wedding. Guests are still mentioning it six months later, and the sketch process made it so easy."</p>
+              <footer> -  Hannah &amp; Cole <span>Wedding, June</span></footer>
+            </blockquote>
+            <blockquote class="slide">
+              <div class="stars" aria-label="5 out of 5 stars">★★★★★</div>
+              <p>"I sent a blurry photo of my daughter's drawing and they turned it into the most magical birthday cake. She cried happy tears."</p>
+              <footer> -  Priya S. <span>Birthday order</span></footer>
+            </blockquote>
+            <blockquote class="slide">
+              <div class="stars" aria-label="5 out of 5 stars">★★★★★</div>
+              <p>"Ordered cupcakes for our office of forty. They arrived on time, looked gorgeous, and disappeared in about four minutes."</p>
+              <footer> -  Marcus D. <span>Corporate order</span></footer>
+            </blockquote>
+          </div>
+          <div class="slider-dots" role="tablist" aria-label="Choose review">
+            <button class="dot active" data-slide="0" aria-label="Review 1"></button>
+            <button class="dot" data-slide="1" aria-label="Review 2"></button>
+            <button class="dot" data-slide="2" aria-label="Review 3"></button>
+          </div>
+        </div>
+      </div>
+    </section>
+
+    <!-- ======================= FAQ ======================= -->
+    <section class="section faq" id="faq">
+      <div class="container">
+        <div class="section-head reveal">
+          <p class="eyebrow">Good to Know</p>
+          <h2>Frequently Asked <em>Questions</em></h2>
+        </div>
+        <div class="faq-list reveal">
+          <div class="faq-item">
+            <button class="faq-q" aria-expanded="false">How far in advance should I order?</button>
+            <div class="faq-a"><p>Custom cakes need at least 7 days notice, two-tier and sculpted cakes need 14 days, and wedding cakes book 3 to 6 months ahead. During May through October we fill up fast, so earlier is always better. Rush orders are sometimes possible for a 25% fee.</p></div>
+          </div>
+          <div class="faq-item">
+            <button class="faq-q" aria-expanded="false">How does the deposit work?</button>
+            <div class="faq-a"><p>A 50% non-refundable deposit reserves your date, and the balance is due at pickup or delivery. Your date is not held until the deposit is paid. We accept cards, cash, and bank transfer.</p></div>
+          </div>
+          <div class="faq-item">
+            <button class="faq-q" aria-expanded="false">Do you deliver?</button>
+            <div class="faq-a"><p>Yes. We deliver within 25 miles of the bakery. Delivery fees start at $25 and depend on distance and cake size. Wedding cakes include professional setup at your venue. Smaller orders can be picked up at the shop during business hours.</p></div>
+          </div>
+          <div class="faq-item">
+            <button class="faq-q" aria-expanded="false">Can you handle nut or gluten allergies?</button>
+            <div class="faq-a"><p>We offer gluten-free and select vegan flavors, and we take allergies seriously. That said, our kitchen handles wheat, dairy, eggs, nuts, and soy, so we cannot guarantee a fully allergen-free environment. Tell us about every allergy in your inquiry and we will advise you honestly about what is safe.</p></div>
+          </div>
+          <div class="faq-item">
+            <button class="faq-q" aria-expanded="false">Do you do tastings?</button>
+            <div class="faq-a"><p>Wedding and large event orders include a tasting box with six flavors after your consultation. For smaller custom cakes, the best tasting is simply ordering a slice of each flavor from the daily case.</p></div>
+          </div>
+          <div class="faq-item">
+            <button class="faq-q" aria-expanded="false">Can I bring my own design or topper?</button>
+            <div class="faq-a"><p>Absolutely. Send inspiration photos, invitations, fabric swatches, or your own cake topper and we will design around them. We love a personal detail.</p></div>
+          </div>
+        </div>
+      </div>
+    </section>
+
+    <!-- ======================= VISIT ======================= -->
+    <section class="section visit" id="visit">
+      <div class="container visit-grid">
+        <div class="visit-info reveal">
+          <p class="eyebrow">Find Us</p>
+          <h2>Visit the <em>Bakery</em></h2>
+          <ul class="contact-list">
+            <li>
+              <svg viewBox="0 0 24 24" fill="none" aria-hidden="true"><path d="M12 21s-7-5.5-7-11a7 7 0 1 1 14 0c0 5.5-7 11-7 11z" stroke="currentColor" stroke-width="1.6"/><circle cx="12" cy="10" r="2.5" stroke="currentColor" stroke-width="1.6"/></svg>
+              <span>418 Sugar Maple Ave, Suite 3<br>Your City, ST 12345</span>
+            </li>
+            <li>
+              <svg viewBox="0 0 24 24" fill="none" aria-hidden="true"><path d="M5 4h4l2 5-2.5 1.5a11 11 0 0 0 5 5L15 13l5 2v4a2 2 0 0 1-2 2A16 16 0 0 1 3 6a2 2 0 0 1 2-2z" stroke="currentColor" stroke-width="1.6" stroke-linejoin="round"/></svg>
+              <a href="tel:+15552148890">+1 (555) 214-8890</a>
+            </li>
+            <li>
+              <svg viewBox="0 0 24 24" fill="none" aria-hidden="true"><rect x="3" y="5" width="18" height="14" rx="2" stroke="currentColor" stroke-width="1.6"/><path d="m3 7 9 6 9-6" stroke="currentColor" stroke-width="1.6"/></svg>
+              <a href="mailto:hello@butterandbloom.shop">hello@butterandbloom.shop</a>
+            </li>
+          </ul>
+          <table class="hours">
+            <tbody>
+              <tr><th>Tuesday – Friday</th><td>8:00a – 6:00p</td></tr>
+              <tr><th>Saturday</th><td>8:00a – 4:00p</td></tr>
+              <tr><th>Sunday – Monday</th><td>Closed (baking for the week)</td></tr>
+            </tbody>
+          </table>
+          <div class="fulfill reveal">
+            <h3>Pickup &amp; Delivery</h3>
+            <p><strong>Pickup:</strong> free at the bakery counter during business hours. We will have your cake boxed, labeled, and ready.</p>
+            <p><strong>Delivery:</strong> available within 25 miles, starting at $25. Wedding and tiered cakes include professional setup at your venue.</p>
+          </div>
+        </div>
+        <div class="visit-map reveal" aria-hidden="true">
+          <!-- TO EMBED A REAL MAP: replace this div with your Google Maps embed:
+               <iframe src="https://www.google.com/maps/embed?..." ...></iframe> -->
+          <div class="map-faux">
+            <div class="map-pin">
+              <svg viewBox="0 0 24 24" fill="none"><path d="M12 21s-7-5.5-7-11a7 7 0 1 1 14 0c0 5.5-7 11-7 11z" fill="#3b2317"/><circle cx="12" cy="10" r="2.5" fill="#fdf6ec"/></svg>
+            </div>
+            <p>Map preview  - <br>embed your Google Map here</p>
+          </div>
+        </div>
+      </div>
+    </section>
+
+  </main>
+
+  <!-- ======================= FOOTER ======================= -->
+  <footer class="site-footer">
+    <div class="container footer-grid">
+      <div class="footer-brand">
+        <a href="#top" class="logo"><span>Butter &amp; Bloom</span></a>
+        <p>Neighborhood bakery specializing in custom cakes. Baked from scratch every morning  -  never frozen, never from a mix.</p>
+        <div class="socials">
+          <a href="#" aria-label="Instagram"><svg viewBox="0 0 24 24" fill="none"><rect x="3" y="3" width="18" height="18" rx="5" stroke="currentColor" stroke-width="1.6"/><circle cx="12" cy="12" r="4" stroke="currentColor" stroke-width="1.6"/><circle cx="17.2" cy="6.8" r="1.2" fill="currentColor"/></svg></a>
+          <a href="#" aria-label="Facebook"><svg viewBox="0 0 24 24" fill="none"><path d="M14 8h2V5h-2a3 3 0 0 0-3 3v2H9v3h2v6h3v-6h2l1-3h-3V8.5c0-.3.2-.5.5-.5z" stroke="currentColor" stroke-width="1.6" stroke-linejoin="round"/></svg></a>
+          <a href="#" aria-label="TikTok"><svg viewBox="0 0 24 24" fill="none"><path d="M14 4v10.5a3.75 3.75 0 1 1-3.75-3.75" stroke="currentColor" stroke-width="1.6" stroke-linecap="round"/><path d="M14 4c.4 2.6 2 4.3 4.8 4.5" stroke="currentColor" stroke-width="1.6" stroke-linecap="round"/></svg></a>
+        </div>
+      </div>
+      <nav class="footer-nav" aria-label="Footer">
+        <h4>Explore</h4>
+        <a href="#menu">Menu</a>
+        <a href="#custom">Custom Cakes</a>
+        <a href="#weddings">Weddings</a>
+        <a href="#order">Order Inquiry</a>
+      </nav>
+      <div class="footer-hours">
+        <h4>Hours</h4>
+        <p>Tue – Fri · 8a – 6p<br>Sat · 8a – 4p<br>Sun – Mon · Closed</p>
+      </div>
+      <div class="footer-contact">
+        <h4>Contact</h4>
+        <p>418 Sugar Maple Ave, Suite 3<br><a href="tel:+15552148890">+1 (555) 214-8890</a><br><a href="mailto:hello@butterandbloom.shop">hello@butterandbloom.shop</a></p>
+      </div>
+    </div>
+    <div class="container footer-base">
+      <p>© <span id="year">2026</span> Butter &amp; Bloom Bakery. All rights reserved.</p>
+      <a href="#top" class="to-top">Back to top ↑</a>
+    </div>
+  </footer>
+
+  <script src="script.js"></script>
+</body>
+</html>
