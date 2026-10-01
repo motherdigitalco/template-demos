@@ -1,0 +1,136 @@
+:root{
+  --cream:#faf4ec;
+  --cream-dark:#f3e9da;
+  --ink:#2b1a22;
+  --rose:#c96f8e;
+  --rose-dark:#a34a68;
+  --berry:#5c2740;
+  --gold:#c9a227;
+  --white:#fffdf9;
+  --radius:18px;
+}
+*{margin:0;padding:0;box-sizing:border-box}
+html{scroll-behavior:smooth}
+body{
+  font-family:"Avenir Next","Segoe UI",Arial,sans-serif;
+  background:var(--cream);color:var(--ink);line-height:1.6;
+}
+h1,h2,h3,.brand{font-family:Georgia,"Times New Roman",serif;font-weight:400}
+.wrap{max-width:1120px;margin:0 auto;padding:0 24px}
+section{padding:96px 0}
+
+/* ---------- nav ---------- */
+.nav{position:sticky;top:0;z-index:50;background:rgba(250,244,236,.94);backdrop-filter:blur(8px);border-bottom:1px solid #e9dccb}
+.nav-inner{max-width:1120px;margin:0 auto;padding:14px 24px;display:flex;align-items:center;gap:28px}
+.brand{display:flex;align-items:center;gap:10px;font-size:26px;color:var(--ink);text-decoration:none}
+.brand-mark{width:38px;height:38px;border-radius:50%;background:linear-gradient(135deg,var(--rose),var(--berry));color:#fff;display:flex;align-items:center;justify-content:center;font-size:22px}
+.nav-links{display:flex;gap:26px;margin-left:auto}
+.nav-links a{color:var(--ink);text-decoration:none;font-size:15px;opacity:.8}
+.nav-links a:hover{opacity:1;color:var(--rose-dark)}
+.nav-toggle{display:none;background:none;border:none;font-size:26px;color:var(--ink);cursor:pointer}
+
+/* ---------- buttons ---------- */
+.btn{display:inline-block;background:linear-gradient(135deg,var(--rose),var(--rose-dark));color:#fff;text-decoration:none;padding:16px 36px;border-radius:60px;font-size:17px;border:none;cursor:pointer;transition:transform .15s ease,box-shadow .15s ease}
+.btn:hover{transform:translateY(-2px);box-shadow:0 10px 24px rgba(163,74,104,.35)}
+.btn-ghost{background:transparent;color:var(--berry);border:2px solid var(--rose)}
+.btn-ghost:hover{box-shadow:none;background:rgba(201,111,142,.12)}
+.btn-small{padding:10px 24px;font-size:15px;margin-left:0}
+
+/* ---------- hero ---------- */
+.hero{position:relative;overflow:hidden;padding:130px 0 110px;background:linear-gradient(160deg,var(--cream) 55%,#f6dfe6 100%)}
+.hero-inner{max-width:1120px;margin:0 auto;padding:0 24px;position:relative;z-index:2}
+.kicker{font-family:"Avenir Next","Segoe UI",Arial,sans-serif;letter-spacing:5px;text-transform:uppercase;font-size:13px;color:var(--rose-dark);margin-bottom:18px}
+.hero h1{font-size:clamp(52px,8vw,104px);line-height:1.02;margin-bottom:22px}
+.lede{font-size:20px;max-width:520px;opacity:.75;margin-bottom:34px}
+.hero-cta{display:flex;gap:16px;flex-wrap:wrap;margin-bottom:56px}
+.hero-stats{display:flex;gap:48px}
+.hero-stats strong{display:block;font-family:Georgia,serif;font-size:34px;color:var(--berry)}
+.hero-stats span{font-size:13px;letter-spacing:1px;text-transform:uppercase;opacity:.6}
+.hero-art{position:absolute;right:-40px;top:50%;transform:translateY(-50%);display:flex;gap:18px;z-index:1;opacity:.9}
+.nail{width:74px;height:190px;border-radius:40px 40px 46px 46px;box-shadow:inset -8px -10px 20px rgba(0,0,0,.18),0 18px 30px rgba(92,39,64,.18)}
+.n1{background:linear-gradient(160deg,#e8a7bd,#c96f8e)}
+.n2{background:linear-gradient(160deg,#f3d9c8,#e0a878);height:210px;margin-top:-24px}
+.n3{background:linear-gradient(160deg,#8e4a63,#5c2740);height:180px;margin-top:14px}
+.n4{background:linear-gradient(160deg,#f6e7d3,#d9b98c)}
+.n5{background:linear-gradient(160deg,#d96f8e,#a34a68);height:170px;margin-top:20px}
+
+/* ---------- services ---------- */
+.services{background:var(--white)}
+.services h2,.gallery h2,.artists h2,.reviews h2,.book h2{font-size:clamp(34px,5vw,54px);margin-bottom:36px}
+.tabs{display:flex;gap:12px;flex-wrap:wrap;margin-bottom:8px}
+.tab{background:var(--cream-dark);border:none;padding:13px 28px;border-radius:40px;font-size:16px;cursor:pointer;color:var(--ink);transition:all .15s ease}
+.tab.active,.tab:hover{background:var(--berry);color:#fff}
+.tab-panels{margin-top:28px;max-width:760px}
+.panel{display:none}
+.panel.active{display:block;animation:fade .3s ease}
+@keyframes fade{from{opacity:0;transform:translateY(6px)}to{opacity:1;transform:none}}
+.price-row{display:flex;justify-content:space-between;align-items:baseline;gap:20px;padding:20px 0;border-bottom:1px dashed #e0cfba}
+.price-row strong{display:block;font-size:18px}
+.price-row span{font-size:15px;opacity:.65}
+.price-row em{font-style:normal;font-family:Georgia,serif;font-size:22px;color:var(--rose-dark);white-space:nowrap}
+.fine{margin-top:26px;font-size:14px;opacity:.6}
+
+/* ---------- gallery ---------- */
+.grid{display:grid;grid-template-columns:repeat(4,1fr);gap:16px}
+.tile{aspect-ratio:1;border-radius:var(--radius);display:flex;align-items:flex-end;padding:18px;color:#fff;font-size:15px;text-shadow:0 1px 6px rgba(0,0,0,.4);box-shadow:inset -10px -14px 30px rgba(0,0,0,.15)}
+.t1{background:linear-gradient(150deg,#7a2438,#c96f8e)}
+.t2{background:linear-gradient(150deg,#f2e3d5,#d9a86c)}
+.t3{background:linear-gradient(150deg,#1c1c22,#5c5c6e)}
+.t4{background:linear-gradient(150deg,#f6cdd8,#e08aa5)}
+.t5{background:linear-gradient(150deg,#8a6a2f,#e8c96a)}
+.t6{background:linear-gradient(150deg,#9db89a,#5c7a5e)}
+.t7{background:linear-gradient(150deg,#2b2b3a,#8a8aa5)}
+.t8{background:linear-gradient(150deg,#f6dfe6,#f0a8bc)}
+
+/* ---------- artists / reviews ---------- */
+.artists{background:var(--white)}
+.cards{display:grid;grid-template-columns:repeat(3,1fr);gap:22px}
+.card{background:var(--cream);border-radius:var(--radius);padding:34px 28px;box-shadow:0 6px 22px rgba(92,39,64,.07)}
+.avatar{width:74px;height:74px;border-radius:50%;display:flex;align-items:center;justify-content:center;font-family:Georgia,serif;font-size:26px;color:#fff;margin-bottom:18px}
+.a1{background:linear-gradient(135deg,var(--rose),var(--berry))}
+.a2{background:linear-gradient(135deg,#d9a86c,#a3703a)}
+.a3{background:linear-gradient(135deg,#8e4a63,#3a2030)}
+.card h3{font-size:24px;margin-bottom:4px}
+.role{font-size:13px;letter-spacing:2px;text-transform:uppercase;color:var(--rose-dark);margin-bottom:12px}
+.card p{font-size:16px;opacity:.75}
+.stars{color:var(--gold);font-size:20px;letter-spacing:3px;margin-bottom:14px}
+.review p{font-size:17px;font-style:italic}
+.review cite{display:block;margin-top:14px;font-style:normal;font-size:14px;opacity:.6}
+
+/* ---------- booking ---------- */
+.book{background:linear-gradient(160deg,var(--berry),#3a2030);color:#f6e9df}
+.book .kicker{color:#e8a7bd}
+.book-grid{display:grid;grid-template-columns:1fr 1fr;gap:64px;align-items:start}
+.book .lede{opacity:.8}
+.hours{list-style:none;margin:30px 0;max-width:340px}
+.hours li{display:flex;justify-content:space-between;padding:12px 0;border-bottom:1px solid rgba(246,233,223,.2);font-size:16px}
+.book .fine a{color:#f6e9df}
+.book-form{background:var(--white);color:var(--ink);border-radius:var(--radius);padding:40px 34px;display:flex;flex-direction:column;gap:18px}
+.book-form label{display:flex;flex-direction:column;gap:8px;font-size:14px;letter-spacing:.5px;text-transform:uppercase;opacity:1;color:var(--berry)}
+.book-form input,.book-form select,.book-form textarea{font:inherit;text-transform:none;letter-spacing:0;color:var(--ink);padding:13px 16px;border:1.5px solid #e9dccb;border-radius:12px;background:var(--cream)}
+.book-form input:focus,.book-form select:focus,.book-form textarea:focus{outline:none;border-color:var(--rose)}
+.book-form .btn{align-self:flex-start}
+.form-note{font-size:15px;min-height:22px;color:var(--rose-dark)}
+
+/* ---------- footer ---------- */
+footer{background:#241119;color:#e9d5dd;padding:64px 0 28px}
+.foot-grid{display:grid;grid-template-columns:2fr 1fr 1fr;gap:32px;margin-bottom:44px}
+.foot-grid .brand{color:#f6e9df}
+footer h4{font-size:13px;letter-spacing:3px;text-transform:uppercase;margin-bottom:14px;color:#c96f8e}
+footer p{font-size:15px;opacity:.85}
+footer a{color:#e9d5dd;text-decoration:none}
+footer a:hover{color:#fff}
+.copy{text-align:center;font-size:13px;opacity:.5}
+
+/* ---------- responsive ---------- */
+@media(max-width:900px){
+  .hero-art{display:none}
+  .grid{grid-template-columns:repeat(2,1fr)}
+  .cards{grid-template-columns:1fr}
+  .book-grid{grid-template-columns:1fr}
+  .nav-links{display:none;position:absolute;top:100%;left:0;right:0;background:var(--cream);flex-direction:column;padding:18px 24px;gap:14px;border-bottom:1px solid #e9dccb}
+  .nav-links.open{display:flex}
+  .nav-toggle{display:block;margin-left:auto}
+  .nav .btn-small{margin-left:0}
+  section{padding:70px 0}
+}
