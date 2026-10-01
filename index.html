@@ -1,0 +1,632 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Ironwood — Custom House Plans &amp; Blueprint Design</title>
+  <meta name="description" content="Ironwood — custom house plans drawn by a draftsman with 18 years in the trade. Stock plans, semi-custom, and full custom design. Plans worth building on.">
+
+  <!-- ============================================================
+       ★ IRONWOOD TEMPLATE — QUICK CUSTOMIZATION ★
+       ------------------------------------------------------------
+       1. BUSINESS NAME : search for "Ironwood" and replace
+       2. BUILDER NAME : search for "Wade" (the "About" section)
+                          and replace with your name
+       3. EMAIL .......: search for "wade@ironwoodplans.com"
+       4. PHONE .......: search for "(555) 014-2288"
+       5. SOCIALS .....: edit the footer "Follow the work" links
+       6. PLANS .......: edit the "Plan Gallery" section below —
+                          plan names, square footage, beds/baths,
+                          and starting prices are plain HTML,
+                          one card per plan
+       7. PRICING .....: edit the "Pricing" section — package
+                          names, prices, and feature lists
+       8. COLORS & FONTS: edit the :root variables in styles.css
+       9. QUOTE FORM .: point the form to Formspree — see the
+                          comment above the <form> tag
+       ============================================================ -->
+
+  <link rel="preconnect" href="https://fonts.googleapis.com">
+  <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+  <link href="https://fonts.googleapis.com/css2?family=Oswald:wght@400;500;600;700&family=Barlow:wght@400;500;600;700&display=swap" rel="stylesheet">
+  <link rel="stylesheet" href="styles.css">
+</head>
+<body>
+
+  <!-- ======================= HEADER ======================= -->
+  <header class="site-header" id="siteHeader">
+    <div class="container header-inner">
+      <a href="#top" class="logo" aria-label="Ironwood home">
+        <!-- Anvil + beam logo mark -->
+        <svg class="logo-mark" viewBox="0 0 40 40" fill="none" aria-hidden="true">
+          <rect x="4" y="30" width="32" height="5" fill="currentColor"/>
+          <path d="M8 30 V14 h10 l4 -5 h10 v5 h-6 l-2 3 h-6 v13 z" fill="currentColor" opacity="0.9"/>
+          <rect x="6" y="8" width="28" height="3" fill="currentColor" opacity="0.55"/>
+        </svg>
+        <span>IRONWOOD</span>
+      </a>
+      <nav class="main-nav" aria-label="Primary">
+        <a href="#plans">Plans</a>
+        <a href="#services">Services</a>
+        <a href="#process">Process</a>
+        <a href="#pricing">Pricing</a>
+        <a href="#reviews">Reviews</a>
+      </nav>
+      <div class="header-actions">
+        <a class="btn btn-amber btn-small" href="#quote">Get a Quote</a>
+        <button class="nav-toggle" id="navToggle" aria-label="Open menu" aria-expanded="false">
+          <span></span><span></span><span></span>
+        </button>
+      </div>
+    </div>
+    <nav class="mobile-nav" id="mobileNav" aria-label="Mobile">
+      <a href="#plans">Plans</a>
+      <a href="#services">Services</a>
+      <a href="#process">Process</a>
+      <a href="#pricing">Pricing</a>
+      <a href="#reviews">Reviews</a>
+      <a class="btn btn-amber" href="#quote">Get a Quote</a>
+    </nav>
+  </header>
+
+  <main id="top">
+
+    <!-- ======================= HERO ======================= -->
+    <section class="hero">
+      <div class="container hero-grid">
+        <div class="hero-copy reveal">
+          <p class="eyebrow"><span class="tick"></span>Custom house plans · Est. 2008</p>
+          <h1>Plans worth<br><em>building on.</em></h1>
+          <p class="lede">I'm Wade — a draftsman with eighteen years in residential construction. I draw house plans that framers can actually read, inspectors approve without a fight, and families live in for decades.</p>
+          <div class="hero-ctas">
+            <a class="btn btn-amber" href="#quote">Get a Quote</a>
+            <a class="btn btn-ghost" href="#plans">Browse the Plans</a>
+          </div>
+          <dl class="hero-stats">
+            <div class="stat">
+              <dt>Plans delivered</dt>
+              <dd>340+</dd>
+            </div>
+            <div class="stat">
+              <dt>Years in the trade</dt>
+              <dd>18</dd>
+            </div>
+            <div class="stat">
+              <dt>Sq ft designed</dt>
+              <dd>1.2M</dd>
+            </div>
+          </dl>
+        </div>
+        <div class="reveal">
+          <!-- Blueprint elevation card -->
+          <figure class="blueprint-card">
+            <svg viewBox="0 0 320 220" fill="none" role="img" aria-label="Blueprint elevation of a farmhouse">
+              <rect x="8" y="8" width="304" height="204" stroke="#ffffff" stroke-opacity="0.25" stroke-width="1"/>
+              <!-- farmhouse elevation, white linework -->
+              <g stroke="#ffffff" stroke-width="2.5" stroke-linecap="round" stroke-linejoin="round">
+                <path d="M60 150 L160 70 L260 150"/>
+                <path d="M80 150 L80 96 M240 150 V96"/>
+                <path d="M80 96 H240"/>
+                <rect x="70" y="150" width="180" height="42"/>
+                <rect x="146" y="162" width="28" height="30"/>
+                <rect x="96" y="162" width="24" height="18"/>
+                <rect x="200" y="162" width="24" height="18"/>
+                <rect x="146" y="108" width="28" height="22"/>
+                <path d="M40 192 H280"/>
+                <path d="M40 186 v12 M280 186 v12"/>
+              </g>
+              <g stroke="#ffffff" stroke-opacity="0.6" stroke-width="1">
+                <path d="M60 202 H260 M60 198 v8 M160 198 v8 M260 198 v8"/>
+              </g>
+              <text x="160" y="216" text-anchor="middle" fill="#ffffff" fill-opacity="0.7" font-size="10" font-family="monospace" letter-spacing="1.5">32'-0" ELEVATION — FARMHOUSE</text>
+              <circle cx="24" cy="24" r="3" fill="#e8912d"/>
+              <circle cx="296" cy="24" r="3" fill="#e8912d"/>
+              <circle cx="24" cy="196" r="3" fill="#e8912d"/>
+              <circle cx="296" cy="196" r="3" fill="#e8912d"/>
+            </svg>
+            <figcaption>
+              <strong>Plan No. 114 — The Farmhouse</strong>
+              <span>2,480 sq ft · 4 bed · 2.5 bath · from $895</span>
+            </figcaption>
+          </figure>
+        </div>
+      </div>
+    </section>
+
+    <!-- ======================= SERVICES ======================= -->
+    <section class="section" id="services">
+      <div class="container">
+        <div class="section-head reveal">
+          <p class="eyebrow"><span class="tick"></span>What I do</p>
+          <h2>Drafting, done <em>right.</em></h2>
+          <p class="section-sub">No vague sketches. No "figure it out in the field." You get complete, buildable plan sets — every dimension nailed down before the first board gets cut.</p>
+        </div>
+        <div class="services-grid">
+          <article class="service-card reveal">
+            <div class="service-icon">
+              <svg viewBox="0 0 32 32" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round" aria-hidden="true">
+                <path d="M4 28 L16 16 M14 4 l6 6 -9 9 -6 -6 z M18 8 l4 4"/>
+              </svg>
+            </div>
+            <h3>Custom Home Plans</h3>
+            <p>From-scratch design built around your lot, your budget, and the way your family actually lives. Full permit-ready plan sets.</p>
+          </article>
+          <article class="service-card reveal">
+            <div class="service-icon">
+              <svg viewBox="0 0 32 32" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round" aria-hidden="true">
+                <path d="M5 27 L27 5 M9 23 l2 2 M13 19 l2 2 M17 15 l2 2 M21 11 l2 2"/>
+                <rect x="3" y="24" width="8" height="5" transform="rotate(-45 7 26)"/>
+              </svg>
+            </div>
+            <h3>Remodel &amp; Addition Plans</h3>
+            <p>Bump-outs, second stories, garage conversions. I tie new work into old framing so it looks like it was always there.</p>
+          </article>
+          <article class="service-card reveal">
+            <div class="service-icon">
+              <svg viewBox="0 0 32 32" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round" aria-hidden="true">
+                <path d="M4 20 h7 l3 -8 3 12 3 -10 2 6 h6"/>
+                <path d="M4 25 h24"/>
+              </svg>
+            </div>
+            <h3>Blueprint Drafting</h3>
+            <p>Got a sketch on a napkin or a rough idea in your head? I'll turn it into clean, dimensioned CAD drawings your builder can price from.</p>
+          </article>
+          <article class="service-card reveal">
+            <div class="service-icon">
+              <svg viewBox="0 0 32 32" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round" aria-hidden="true">
+                <path d="M6 26 v-8 a10 10 0 0 1 20 0 v8 M6 26 h20 M16 8 v4 M11 12 h10"/>
+              </svg>
+            </div>
+            <h3>Site Consults</h3>
+            <p>Walk your lot with me before you buy or build. Setbacks, drainage, orientation, access — the stuff that bites you later if you skip it.</p>
+          </article>
+        </div>
+      </div>
+    </section>
+
+    <!-- ======================= PLAN GALLERY ======================= -->
+    <section class="section section-dark" id="plans">
+      <div class="container">
+        <div class="section-head reveal">
+          <p class="eyebrow"><span class="tick"></span>The plan library</p>
+          <h2>Pick a starting <em>point.</em></h2>
+          <p class="section-sub">Every plan below is a proven, buildable design. Buy it as-is, or use it as the bones for a semi-custom build. Filter by style to find your fit.</p>
+        </div>
+        <div class="filter-row reveal" role="group" aria-label="Filter plans by style">
+          <button class="filter-pill is-active" data-filter="all">All Plans</button>
+          <button class="filter-pill" data-filter="farmhouse">Farmhouse</button>
+          <button class="filter-pill" data-filter="barndo">Barndominium</button>
+          <button class="filter-pill" data-filter="cabin">Cabin</button>
+          <button class="filter-pill" data-filter="garage">Garage Apt</button>
+          <button class="filter-pill" data-filter="ranch">Ranch</button>
+          <button class="filter-pill" data-filter="workshop">Workshop</button>
+        </div>
+        <div class="plans-grid" id="plansGrid">
+
+          <!-- TIP: copy a whole <article class="plan-card"> block to add a plan.
+               data-category must match one of the filter values above. -->
+
+          <article class="plan-card reveal" data-category="farmhouse">
+            <div class="plan-art">
+              <svg viewBox="0 0 200 140" fill="none" stroke="#fff" stroke-width="2" stroke-linecap="round" stroke-linejoin="round" role="img" aria-label="Farmhouse blueprint elevation">
+                <path d="M35 95 L100 40 L165 95"/>
+                <path d="M48 95 V60 M152 95 V60 M48 60 H152"/>
+                <rect x="42" y="95" width="116" height="26"/>
+                <rect x="91" y="103" width="18" height="18"/>
+                <rect x="60" y="103" width="14" height="11"/>
+                <rect x="126" y="103" width="14" height="11"/>
+                <path d="M25 121 H175 M100 121 v6"/>
+              </svg>
+            </div>
+            <div class="plan-body">
+              <p class="plan-no">Plan No. 114</p>
+              <h3>The Farmhouse</h3>
+              <ul class="plan-specs">
+                <li><strong>2,480</strong> sq ft</li>
+                <li><strong>4</strong> bed</li>
+                <li><strong>2.5</strong> bath</li>
+              </ul>
+              <p class="plan-price">from <strong>$895</strong></p>
+              <button class="btn btn-amber btn-small btn-block" data-plan="The Farmhouse (No. 114)">Get This Plan</button>
+            </div>
+          </article>
+
+          <article class="plan-card reveal" data-category="barndo">
+            <div class="plan-art">
+              <svg viewBox="0 0 200 140" fill="none" stroke="#fff" stroke-width="2" stroke-linecap="round" stroke-linejoin="round" role="img" aria-label="Barndominium blueprint elevation">
+                <path d="M30 100 L55 62 H145 L170 100"/>
+                <path d="M55 62 V48 H145 V62"/>
+                <path d="M85 48 V34 H115 V48"/>
+                <rect x="30" y="100" width="140" height="22"/>
+                <rect x="80" y="100" width="40" height="22"/>
+                <path d="M80 100 L120 122 M120 100 L80 122"/>
+                <rect x="42" y="70" width="14" height="12"/>
+                <rect x="144" y="70" width="14" height="12"/>
+              </svg>
+            </div>
+            <div class="plan-body">
+              <p class="plan-no">Plan No. 207</p>
+              <h3>The Barndominium</h3>
+              <ul class="plan-specs">
+                <li><strong>3,120</strong> sq ft</li>
+                <li><strong>3</strong> bed</li>
+                <li><strong>2</strong> bath</li>
+              </ul>
+              <p class="plan-price">from <strong>$1,150</strong></p>
+              <button class="btn btn-amber btn-small btn-block" data-plan="The Barndominium (No. 207)">Get This Plan</button>
+            </div>
+          </article>
+
+          <article class="plan-card reveal" data-category="cabin">
+            <div class="plan-art">
+              <svg viewBox="0 0 200 140" fill="none" stroke="#fff" stroke-width="2" stroke-linecap="round" stroke-linejoin="round" role="img" aria-label="Cabin blueprint elevation">
+                <path d="M40 108 L100 44 L160 108"/>
+                <path d="M52 108 V76 M148 108 V76 M52 76 H148"/>
+                <rect x="90" y="88" width="20" height="20"/>
+                <rect x="60" y="84" width="14" height="12"/>
+                <rect x="126" y="84" width="14" height="12"/>
+                <path d="M132 60 h14 v22 h-14 M132 66 h14 M132 72 h14 M132 78 h14" stroke-width="1.5"/>
+                <path d="M30 108 H170"/>
+              </svg>
+            </div>
+            <div class="plan-body">
+              <p class="plan-no">Plan No. 088</p>
+              <h3>The A-Frame Cabin</h3>
+              <ul class="plan-specs">
+                <li><strong>1,180</strong> sq ft</li>
+                <li><strong>2</strong> bed</li>
+                <li><strong>1.5</strong> bath</li>
+              </ul>
+              <p class="plan-price">from <strong>$750</strong></p>
+              <button class="btn btn-amber btn-small btn-block" data-plan="The A-Frame Cabin (No. 088)">Get This Plan</button>
+            </div>
+          </article>
+
+          <article class="plan-card reveal" data-category="garage">
+            <div class="plan-art">
+              <svg viewBox="0 0 200 140" fill="none" stroke="#fff" stroke-width="2" stroke-linecap="round" stroke-linejoin="round" role="img" aria-label="Garage apartment blueprint elevation">
+                <rect x="45" y="78" width="110" height="34"/>
+                <path d="M45 78 L70 48 H130 L155 78"/>
+                <rect x="60" y="88" width="34" height="24"/>
+                <rect x="106" y="88" width="34" height="24"/>
+                <path d="M60 96 H94 M60 104 H94 M106 96 H140 M106 104 H140" stroke-width="1.2"/>
+                <rect x="88" y="52" width="24" height="20"/>
+                <path d="M88 52 L100 42 L112 52"/>
+                <path d="M35 112 H165"/>
+              </svg>
+            </div>
+            <div class="plan-body">
+              <p class="plan-no">Plan No. 152</p>
+              <h3>The Garage Apartment</h3>
+              <ul class="plan-specs">
+                <li><strong>960</strong> sq ft</li>
+                <li><strong>1</strong> bed</li>
+                <li><strong>1</strong> bath</li>
+              </ul>
+              <p class="plan-price">from <strong>$695</strong></p>
+              <button class="btn btn-amber btn-small btn-block" data-plan="The Garage Apartment (No. 152)">Get This Plan</button>
+            </div>
+          </article>
+
+          <article class="plan-card reveal" data-category="ranch">
+            <div class="plan-art">
+              <svg viewBox="0 0 200 140" fill="none" stroke="#fff" stroke-width="2" stroke-linecap="round" stroke-linejoin="round" role="img" aria-label="Ranch house blueprint elevation">
+                <path d="M25 88 L55 62 H145 L175 88"/>
+                <rect x="25" y="88" width="150" height="26"/>
+                <rect x="92" y="96" width="18" height="18"/>
+                <rect x="45" y="96" width="16" height="12"/>
+                <rect x="70" y="96" width="16" height="12"/>
+                <rect x="118" y="96" width="16" height="12"/>
+                <rect x="142" y="96" width="16" height="12"/>
+                <path d="M15 114 H185"/>
+              </svg>
+            </div>
+            <div class="plan-body">
+              <p class="plan-no">Plan No. 176</p>
+              <h3>The Ranch</h3>
+              <ul class="plan-specs">
+                <li><strong>2,150</strong> sq ft</li>
+                <li><strong>3</strong> bed</li>
+                <li><strong>2</strong> bath</li>
+              </ul>
+              <p class="plan-price">from <strong>$825</strong></p>
+              <button class="btn btn-amber btn-small btn-block" data-plan="The Ranch (No. 176)">Get This Plan</button>
+            </div>
+          </article>
+
+          <article class="plan-card reveal" data-category="workshop">
+            <div class="plan-art">
+              <svg viewBox="0 0 200 140" fill="none" stroke="#fff" stroke-width="2" stroke-linecap="round" stroke-linejoin="round" role="img" aria-label="Workshop blueprint elevation">
+                <path d="M50 92 L100 52 L150 92"/>
+                <rect x="50" y="92" width="100" height="24"/>
+                <rect x="82" y="92" width="36" height="24"/>
+                <path d="M82 92 L118 116 M118 92 L82 116" stroke-width="1.5"/>
+                <path d="M150 100 h22 v16 h-22 M150 104 h22 M150 108 h22 M150 112 h22" stroke-width="1.5"/>
+                <rect x="60" y="66" width="12" height="10"/>
+                <path d="M40 116 H180"/>
+              </svg>
+            </div>
+            <div class="plan-body">
+              <p class="plan-no">Plan No. 301</p>
+              <h3>The Workshop</h3>
+              <ul class="plan-specs">
+                <li><strong>1,440</strong> sq ft</li>
+                <li><strong>—</strong> shop</li>
+                <li><strong>1</strong> bath</li>
+              </ul>
+              <p class="plan-price">from <strong>$595</strong></p>
+              <button class="btn btn-amber btn-small btn-block" data-plan="The Workshop (No. 301)">Get This Plan</button>
+            </div>
+          </article>
+
+        </div>
+        <p class="plans-note reveal">Don't see your floor plan? Most stock plans can be stretched, flipped, or reworked — <a class="inline-link" href="#pricing">see Semi-Custom</a>, or <a class="inline-link" href="#quote">tell me what you need</a>.</p>
+      </div>
+    </section>
+
+    <!-- ======================= PROCESS ======================= -->
+    <section class="section" id="process">
+      <div class="container">
+        <div class="section-head reveal">
+          <p class="eyebrow"><span class="tick"></span>How it works</p>
+          <h2>From first call to <em>final print.</em></h2>
+          <p class="section-sub">A straight line, no runaround. You'll always know what happens next and what it costs.</p>
+        </div>
+        <ol class="process-steps">
+          <li class="process-step reveal">
+            <span class="step-no">01</span>
+            <h3>Consult</h3>
+            <p>We talk — your lot, your budget, your must-haves. Free 30-minute call. If I'm not the right man for the job, I'll tell you straight.</p>
+          </li>
+          <li class="process-step reveal">
+            <span class="step-no">02</span>
+            <h3>Draft</h3>
+            <p>I draw the first full set: floor plans, elevations, foundation, and roof. You review real drawings, not vague promises.</p>
+          </li>
+          <li class="process-step reveal">
+            <span class="step-no">03</span>
+            <h3>Revise</h3>
+            <p>We move walls, resize rooms, and sweat the details until it's right. Revisions are part of the price, not a surprise invoice.</p>
+          </li>
+          <li class="process-step reveal">
+            <span class="step-no">04</span>
+            <h3>Build</h3>
+            <p>You get the final permit-ready set — PDF and CAD. Hand it to your builder or your building department with confidence.</p>
+          </li>
+        </ol>
+      </div>
+    </section>
+
+    <!-- ======================= PRICING ======================= -->
+    <section class="section" id="pricing">
+      <div class="container">
+        <div class="section-head reveal">
+          <p class="eyebrow"><span class="tick"></span>Straightforward pricing</p>
+          <h2>Pick your <em>package.</em></h2>
+          <p class="section-sub">Three ways to work with me. Every package includes a complete, dimensioned plan set — no half-drawn anything.</p>
+        </div>
+        <div class="pricing-grid">
+          <!-- TIP: edit package names, prices, and feature lists below -->
+          <article class="price-card reveal">
+            <h3>Stock Plans</h3>
+            <p class="price"><span class="price-amount">$895</span><span class="price-note">starting at</span></p>
+            <p class="price-desc">Pick a proven design from the plan library and build it as drawn.</p>
+            <ul class="price-features">
+              <li>Any plan from the library</li>
+              <li>PDF + CAD plan set</li>
+              <li>2 minor revisions included</li>
+              <li>Permit-ready sheets</li>
+              <li>Delivery in 5–7 days</li>
+            </ul>
+            <a class="btn btn-outline btn-block" href="#quote">Start with Stock</a>
+          </article>
+          <article class="price-card price-featured reveal">
+            <p class="price-tag">Most popular</p>
+            <h3>Semi-Custom</h3>
+            <p class="price"><span class="price-amount">$2,400</span><span class="price-note">starting at</span></p>
+            <p class="price-desc">Start from a stock plan and make it yours — move walls, resize, rework.</p>
+            <ul class="price-features">
+              <li>Everything in Stock Plans</li>
+              <li>Move walls, windows &amp; doors</li>
+              <li>Resize up to 20%</li>
+              <li>3D exterior rendering</li>
+              <li>Revisions until it's right</li>
+            </ul>
+            <a class="btn btn-amber btn-block" href="#quote">Go Semi-Custom</a>
+          </article>
+          <article class="price-card reveal">
+            <h3>Full Custom Design</h3>
+            <p class="price"><span class="price-amount">$4,800</span><span class="price-note">starting at</span></p>
+            <p class="price-desc">Designed from a blank page around your lot and your life.</p>
+            <ul class="price-features">
+              <li>From-scratch design</li>
+              <li>On-site lot consult</li>
+              <li>Full permit set + engineering coordination</li>
+              <li>Interior elevations included</li>
+              <li>Priority scheduling</li>
+            </ul>
+            <a class="btn btn-outline btn-block" href="#quote">Design Mine</a>
+          </article>
+        </div>
+        <p class="pricing-note reveal">Every job starts with a free 30-minute consult. If the numbers don't work, you'll know before you spend a dime.</p>
+      </div>
+    </section>
+
+    <!-- ======================= REVIEWS ======================= -->
+    <section class="section section-dark" id="reviews">
+      <div class="container">
+        <div class="section-head reveal">
+          <p class="eyebrow"><span class="tick"></span>Word from the job site</p>
+          <h2>Builders <em>trust it.</em></h2>
+        </div>
+        <div class="slider reveal" id="reviewSlider">
+          <div class="slides">
+            <blockquote class="slide is-active">
+              <p>"Wade's plans are the cleanest I've framed off of in twenty years. Dimensions everywhere they should be, nothing left to guess. My crew finished two days ahead of schedule."</p>
+              <footer><strong>Mike R.</strong> — General Contractor, Tulsa OK</footer>
+            </blockquote>
+            <blockquote class="slide">
+              <p>"We brought him a napkin sketch and a Pinterest board. He brought us back a house. The county approved the permit set on the first submission — first time that's ever happened to me."</p>
+              <footer><strong>Dan &amp; Carla S.</strong> — Custom Home Clients</footer>
+            </blockquote>
+            <blockquote class="slide">
+              <p>"The barndo plans paid for themselves before we broke ground. Our lender took one look at the drawing set and stopped asking questions."</p>
+              <footer><strong>Jess T.</strong> — Barndominium Owner-Builder</footer>
+            </blockquote>
+          </div>
+          <div class="slider-controls">
+            <button class="slider-btn" id="prevSlide" aria-label="Previous review">&#8592;</button>
+            <div class="slider-dots" id="sliderDots" role="tablist" aria-label="Choose review"></div>
+            <button class="slider-btn" id="nextSlide" aria-label="Next review">&#8594;</button>
+          </div>
+        </div>
+      </div>
+    </section>
+
+    <!-- ======================= ABOUT ======================= -->
+    <section class="section" id="about">
+      <div class="container about-grid">
+        <div class="about-art reveal" aria-hidden="true">
+          <!-- Stylized builder badge: hard hat + beams -->
+          <svg viewBox="0 0 220 220" fill="none" role="img" aria-label="Builder badge illustration">
+            <circle cx="110" cy="110" r="100" fill="#201d18" stroke="#e8912d" stroke-width="4"/>
+            <circle cx="110" cy="110" r="86" stroke="#3a342a" stroke-width="2" stroke-dasharray="6 6"/>
+            <g stroke="#f0e9da" stroke-width="5" stroke-linecap="round" stroke-linejoin="round">
+              <path d="M70 108 a40 40 0 0 1 80 0"/>
+              <path d="M62 108 h96"/>
+              <path d="M110 68 v-12 h-14"/>
+              <path d="M86 132 h48 M92 146 h36"/>
+            </g>
+            <g stroke="#e8912d" stroke-width="3" stroke-linecap="round">
+              <path d="M70 168 l14 -10 M150 168 l-14 -10"/>
+            </g>
+            <text x="110" y="192" text-anchor="middle" fill="#e8912d" font-size="15" font-family="Oswald, sans-serif" letter-spacing="4">EST. 2008</text>
+          </svg>
+        </div>
+        <div class="about-copy reveal">
+          <p class="eyebrow"><span class="tick"></span>The man behind the pencil</p>
+          <h2>Built in the field,<br><em>drawn at the desk.</em></h2>
+          <p>I'm Wade. I spent my twenties framing houses, hanging drywall, and fixing other people's drawings in the field with a speed square and a bad attitude. Eighteen years ago I picked up a pencil — now AutoCAD — and started drawing the plans I always wished I'd been handed.</p>
+          <p>Every set I deliver is drawn like I'm the one who has to build it. Because for a long time, I was.</p>
+          <ul class="about-points">
+            <li><strong>18 yrs</strong> residential construction &amp; drafting</li>
+            <li><strong>340+</strong> plan sets delivered across 22 states</li>
+            <li><strong>Licensed</strong> where your jurisdiction requires it — ask me</li>
+          </ul>
+          <a class="btn btn-amber" href="#quote">Work With Me</a>
+        </div>
+      </div>
+    </section>
+
+    <!-- ======================= QUOTE FORM ======================= -->
+    <section class="section section-dark" id="quote">
+      <div class="container quote-grid">
+        <div class="quote-copy reveal">
+          <p class="eyebrow"><span class="tick"></span>Get a quote</p>
+          <h2>Tell me about<br><em>the build.</em></h2>
+          <p class="section-sub">Fill this out and I'll get back to you within two business days with honest numbers and a straight answer on timeline. No pressure, no sales pitch.</p>
+          <ul class="quote-contact">
+            <li><strong>Email</strong> — <a class="inline-link" href="mailto:wade@ironwoodplans.com">wade@ironwoodplans.com</a></li>
+            <li><strong>Phone</strong> — <a class="inline-link" href="tel:+15550142288">(555) 014-2288</a></li>
+            <li><strong>Hours</strong> — Mon–Fri, 7am–5pm Central</li>
+          </ul>
+        </div>
+        <div class="reveal">
+          <!-- MAKE THE FORM SEND YOU EMAIL (free, 5 minutes):
+               1. Create a free endpoint at https://formspree.io (or https://usebasin.com)
+               2. Change the <form> tag below to:
+                    <form action="https://formspree.io/f/YOUR_ID" method="POST">
+               3. In script.js, delete the line marked
+                  "remove this line once the form posts to a real endpoint". -->
+          <form class="quote-form" id="quoteForm" novalidate>
+            <div class="form-row">
+              <div class="form-field">
+                <label for="qName">Name</label>
+                <input type="text" id="qName" name="name" placeholder="Your full name" required>
+              </div>
+              <div class="form-field">
+                <label for="qPhone">Phone</label>
+                <input type="tel" id="qPhone" name="phone" placeholder="(555) 000-0000">
+              </div>
+            </div>
+            <div class="form-field">
+              <label for="qEmail">Email</label>
+              <input type="email" id="qEmail" name="email" placeholder="you@example.com" required>
+            </div>
+            <div class="form-row">
+              <div class="form-field">
+                <label for="qType">Project type</label>
+                <select id="qType" name="project_type" required>
+                  <option value="">Choose one…</option>
+                  <option>New home — stock plan</option>
+                  <option>New home — semi-custom</option>
+                  <option>New home — full custom</option>
+                  <option>Remodel / addition</option>
+                  <option>Garage / shop / barndo</option>
+                  <option>Something else</option>
+                </select>
+              </div>
+              <div class="form-field">
+                <label for="qSize">Approx. sq ft</label>
+                <select id="qSize" name="sqft">
+                  <option value="">Choose one…</option>
+                  <option>Under 1,000</option>
+                  <option>1,000 – 2,000</option>
+                  <option>2,000 – 3,000</option>
+                  <option>3,000+</option>
+                  <option>Not sure yet</option>
+                </select>
+              </div>
+            </div>
+            <div class="form-field">
+              <label for="qMsg">About the project</label>
+              <textarea id="qMsg" name="message" rows="4" placeholder="Lot location, timeline, must-haves — anything that helps me price it right." required></textarea>
+            </div>
+            <p class="form-note" id="formNote" role="status" aria-live="polite"></p>
+            <button class="btn btn-amber btn-block" type="submit">Request My Quote</button>
+            <p class="form-fine">Free 30-minute consult with every request. I reply within two business days.</p>
+          </form>
+        </div>
+      </div>
+    </section>
+
+  </main>
+
+  <!-- ======================= FOOTER ======================= -->
+  <footer class="site-footer">
+    <div class="container footer-grid">
+      <div class="footer-brand">
+        <a href="#top" class="logo">
+          <svg class="logo-mark" viewBox="0 0 40 40" fill="none" aria-hidden="true">
+            <rect x="4" y="30" width="32" height="5" fill="currentColor"/>
+            <path d="M8 30 V14 h10 l4 -5 h10 v5 h-6 l-2 3 h-6 v13 z" fill="currentColor" opacity="0.9"/>
+            <rect x="6" y="8" width="28" height="3" fill="currentColor" opacity="0.55"/>
+          </svg>
+          <span>IRONWOOD</span>
+        </a>
+        <p>Custom house plans drawn to be built. Drafted with pride, dimensioned to the sixteenth.</p>
+      </div>
+      <nav class="footer-nav" aria-label="Footer">
+        <a href="#plans">Plans</a>
+        <a href="#services">Services</a>
+        <a href="#process">Process</a>
+        <a href="#pricing">Pricing</a>
+        <a href="#quote">Get a Quote</a>
+      </nav>
+      <div class="footer-social">
+        <p>Follow the work</p>
+        <!-- TIP: replace the # links below with your real profiles -->
+        <a href="#">Facebook</a>
+        <a href="#">Instagram</a>
+        <a href="#">Houzz</a>
+      </div>
+    </div>
+    <div class="container footer-base">
+      <p>&copy; <span id="year">2026</span> Ironwood. All rights reserved.</p>
+      <p class="license-note">Template single-use license — use for one business.</p>
+    </div>
+  </footer>
+
+  <script src="script.js"></script>
+</body>
+</html>
